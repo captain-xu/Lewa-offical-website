@@ -1,0 +1,80 @@
+
+.header{
+	font-family: SFNSText;
+	position: absolute;
+	left: 5%;
+	top: 0;
+	width: 90%;
+	height: 80px;
+	padding: 10px 5%;
+	background: transparent;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	z-index: 1;
+}
+.header .header-logo {
+	vertical-align: top;
+}
+.header .header-call {
+	display: inline-block;
+	vertical-align: top;
+    height: 40px;
+    line-height: 40px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 10px 15px;
+    padding-left: 15px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.header .header-nav {
+	color: #fff;
+	height: 60px;
+	line-height: 60px;
+	float: right;
+}
+.header .header-nav>li {
+	display: inline-block;
+	width: 90px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 13px;
+	text-align: center;
+	cursor: pointer;
+	transition: background .5s linear;
+}
+.header .header-nav>li:hover,
+.header .header-nav>li.active {
+	background: rgba(255,255,255,0.35);
+	border-radius: 2px;
+	font-weight: bold;
+}
+.header .header-nav>li>a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+    color: rgba(255, 255, 255, 0.7);
+}
+.top-container{
+	width: 100%;
+	height: 980px;
+	padding-top: 320px;
+	color: #fff;
+	text-align: center;
+	background-size: 100% 100%;
+}
+.top-container .top-logo {
+	width: 160px;
+	height: 40px;
+}
+.top-container .top-introduction {
+    font-size: 39px;
+    margin: 0;
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+.top-container .top-content {
+	width: 80%;
+	margin: 0 auto;
+	font-size: 16px;
+	text-align: left;
+	color: rgba(255, 255, 255, 0.82)
+}

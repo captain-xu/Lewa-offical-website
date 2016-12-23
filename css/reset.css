@@ -1,0 +1,99 @@
+
+* {margin: 0;padding: 0;list-style: none;outline: none;}
+
+*,*:before,*:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+/*边框内边距不占盒子本身宽高*/
+
+html {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%; height: 100%;}
+/*ios手机中点击时取消表单边框、横屏时默认会放大文字的问题*/
+
+body {line-height: 1.428571429;color: #666;background-color: #f1f1f1;font-size: 14px;font-family: OpenSans; height: 100%;overflow-x: hidden; overflow-y: auto;}
+
+a ,
+a:hover,
+a:focus {text-decoration: none;}
+a:focus {outline: thin dotted;outline: 5px auto -webkit-focus-ring-color;outline-offset: -2px;}
+
+
+ul, menu, dir {-webkit-margin-before: 0;-webkit-margin-after: 0;-webkit-margin-start: 0;-webkit-margin-end: 0;-webkit-padding-start: 0;}
+
+abbr[title] {border-bottom: 1px dotted;}
+/*缩略图添加文字下面的小点提示*/
+
+
+mark {color: #000;background: #ff0;}
+
+
+article,
+aside,
+details,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {display: block;}
+
+audio,
+canvas,
+progress,
+video {display: inline-block;vertical-align: baseline;}
+
+audio:not([controls]) {display: none;height: 0;}
+[hidden],template { display: none;}
+
+img {max-width: 100%;width: auto\9;/*解决IE宽度自适应*/height: auto;border: 0;-ms-interpolation-mode: bicubic;/*解决IE图片失真*/}
+
+svg:not(:root) { overflow: hidden;}
+
+hr {height: 0;}
+
+input,label,select,button,img{vertical-align :middle;}
+
+input,
+button,
+select,
+textarea {font-family: inherit;line-height: inherit;font-size: inherit;}
+
+button,
+input,
+select,
+textarea {font: inherit;color: inherit;margin: 0;}
+
+button {overflow: visible;}
+
+button,
+select {text-transform: none;}
+
+button[disabled],
+html input[disabled] { cursor: default;}
+
+button::-moz-focus-inner,
+
+input::-moz-focus-inner {border: 0; padding: 0;}
+
+input { line-height: normal;}
+
+input[type='checkbox'],input[type='radio'] {padding: 0;box-sizing: border-box;}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {height: auto;}
+
+input[type='search'] {-webkit-appearance: textfield;}
+
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {-webkit-appearance: none;}
+
+legend {border: 0;padding: 0;}
+
+textarea {overflow: auto;resize:none;}
+
+table {border-spacing: 0;border-collapse: collapse;}
+
+td,
+th {padding: 0;}
+
+
+.clearfix:after { content: ''; display: block; height: 0; clear: both; }
+.clearfix { zoom: 1; }
+.clear { clear: both; }

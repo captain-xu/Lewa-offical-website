@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>RevaNow – LeWa makes life happier!</title>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.1.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/revaNow.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <img src="../img/logo.png" class="header-logo" width="135" height="60">
+        <span class="header-call">
+            <i class="fa fa-phone"></i>
+            + 82 88888888
+        </span>
+        <ul class="header-nav">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="">LEWA OS</a></li>
+            <li class="active">RevaNow</li>
+            <li><a href="">CONTACT US</a></li>
+            <li><a href="">GET STARTED</a></li>
+        </ul>
+    </header>
+    <div class="top-container">
+        <img src="../img/reva.png" class="top-logo">
+        <h1 class="top-introduction">An operating platform based on Android OS</h1>
+        <p class="top-content">Based on the competitiveness on Android OS, the operating platform, RevaNow, contains REVA Mobile Service and REVA Backend System to manage and monetize data and traffic together with phone manufactures, by the means of providing contents distribution and big data analysis, OS-level system security and control mechanism.</p>
+        <p class="top-content">We are proud to be a close partner of many worldwide phone brands in the past years, and we will always persist in developing this kind of relationship, and spare no effort to further your interests.</p>
+        <div class="top-img-wrip">
+            <div class="top-rms">
+                <div class="top-img-shade">
+                    <p>RMS</p>
+                    <span>REVA Mobile Service</span>
+                </div>
+            </div>
+            <div class="top-rbs">
+                <div class="top-img-shade">
+                    <p>RBS</p>
+                    <span>REVA Backend System</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modular-container">
+        <h2 class="modular-title">Revolutionary <strong>REVA Modular System</strong> for Better SPEED</h2>
+        <p class="modular-introduction">An data analysis platform based on Android OS</p>
+        <div class="modular-preview clearfix">
+            <div class="preview-left">
+                <h3 class="preview-left-title">Our Improvements</h3>
+                <ul class="preview-left-btn">
+                    <li onclick="slideReva(0)" class="active"></li>
+                    <li onclick="slideReva(1)"></li>
+                    <li onclick="slideReva(2)"></li>
+                    <li onclick="slideReva(3)"></li>
+                    <li onclick="slideReva(4)"></li>
+                    <li onclick="slideReva(5)"></li>
+                </ul>
+            </div>
+            <div class="preview-right">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../img/pic_dataTracker.png"></div>
+                        <div class="swiper-slide"><img src="../img/pic_dataTracker.png"></div>
+                        <div class="swiper-slide"><img src="../img/pic_dataTracker.png"></div>
+                        <div class="swiper-slide"><img src="../img/pic_dataTracker.png"></div>
+                        <div class="swiper-slide"><img src="../img/pic_dataTracker.png"></div>
+                        <div class="swiper-slide"><img src="../img/pic_dataTracker.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.1.jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        var revaSwiper = new Swiper('.preview-right .swiper-container', {
+            effect : 'coverflow',
+            slidesPerView: 1.2,
+            centeredSlides: true,
+            // initialSlide :1,
+            simulateTouch : false,
+            coverflow: {
+                        rotate: 30,
+                        stretch: 10,
+                        depth: 60,
+                        modifier: 2,
+                        slideShadows : true
+                    }
+        })
+        var slideReva = function(num) {
+            revaSwiper.slideTo(num, 1000, false);
+            $(".preview-left-btn").children().eq(num).addClass('active').siblings().removeClass('active');
+        }
+    </script>
+</body>
+</body>
+
+</html>
