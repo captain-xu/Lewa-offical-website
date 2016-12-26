@@ -76,6 +76,106 @@
             </div>
         </div>
     </div>
+    <div class="app-container">
+        <h2 class="app-title"><strong>RMS</strong>-App groups</h2>
+        <h3 class="app-subtitle"><em>Experience + Service</em></h3>
+        <p class="app-content">
+            Multiple scenarios service in OS, friendly user experience, win-win partnership <br />
+            • Interactively experiences among multiple scenarios in OS, target advertising combined with big data to grow advertising revenue.<br />
+            • Fully controlled operation with phone manufacturers, and share continuous benefits with global phone manufactures and advertising partners.
+        </p>
+        <ul class="app-icon">
+            <li onclick="slideApp(0)">
+                <img src="../img/icon_theme.png"><br />
+                <span><img src="../img/icon_play.png">Theme</span>                                       
+            </li>
+            <li onclick="slideApp(1)">
+                <img src="../img/icon_discover.png"><br />
+                <span><img src="../img/icon_play.png">Discover</span>
+            </li>
+            <li onclick="slideApp(2)">
+                <img src="../img/icon_news.png"><br />
+                <span><img src="../img/icon_play.png">News</span>
+            </li>
+            <li class="active" onclick="slideApp(3)">
+                <img src="../img/icon_home.png"><br />
+                <span><img src="../img/icon_play.png">Home</span>
+            </li>
+            <li onclick="slideApp(4)">
+                <img src="../img/icon_game.png"><br />
+                <span><img src="../img/icon_play.png">Game</span>
+            </li>
+            <li onclick="slideApp(5)">
+                <img src="../img/icon_clean.png"><br />
+                <span><img src="../img/icon_play.png">Clean</span>
+            </li>
+        </ul>
+        <div class="app-preview">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../img/pic_dataTracker.png"></div>
+                        <div class="swiper-slide"><img src="../img/pic_dataTracker.png"></div>
+                        <div class="swiper-slide"><img src="../img/pic_dataTracker.png"></div>
+                        <div class="swiper-slide"><img src="../img/pic_dataTracker.png"></div>
+                        <div class="swiper-slide"><img src="../img/pic_dataTracker.png"></div>
+                        <div class="swiper-slide"><img src="../img/pic_dataTracker.png"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="detail-container">
+        <div class="detail-left-wrip">
+            <h2>Built with High Attention to Details</h2>
+            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.</p>
+        </div>
+        <div class="detail-right-wrip">
+            <img src="../img/course_card.png">
+        </div>
+    </div>
+    <footer class="footer">
+        <ul class="footer-pub">
+            <li> 
+                <h2>Contact Us</h2>
+                <a href="">Partner opportunities</a><br>
+                <a href="">partnership@lewatek.com</a><br>
+            </li>
+            <li>
+                <h4>Company</h4>
+                <a href="">Home</a><br>
+                <a href="">About Us</a><br>
+                <a href="">Pricing</a><br>
+                <a href="">Contact Us</a><br>
+            </li>
+            <li>
+                <h4>Others</h4>
+                <a href="">Help & Support</a><br>
+                <a href="">Privacy Policy</a><br>
+                <a href="">Terms</a><br>
+                <a href="">Sitemap</a><br>
+            </li>
+            <li>
+                <h4>Newsletter</h4>
+                <p>Subscribe to our newsletter and get all the cool news</p>
+                <div class="email-wrip">
+                    <input type="text" placeholder="Enter Email">
+                    <i class="fa fa-paper-plane-o"></i>
+                </div>
+            </li>
+        </ul>
+        <div class="copyright">
+            <a href="">Home | </a>
+            <a href="">LeWa OS | </a>
+            <a href="">RevaNow | </a>
+            <a href="">About LeWa &copy; 2011-2016 LeWa Co., Ltd</a>
+            <div class="society">
+                <a href="https://twitter.com/Lewa_OS" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                <a href="https://www.facebook.com/LeWaOSofficial/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            </div>
+        </div>
+    </footer>
+    <div id="to-top">
+        <i class="fa fa-arrow-up"></i>
+    </div>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/swiper-3.4.1.jquery.min.js"></script>
     <script src="../js/main.js"></script>
@@ -84,20 +184,37 @@
             effect : 'coverflow',
             slidesPerView: 1.2,
             centeredSlides: true,
-            // initialSlide :1,
             simulateTouch : false,
             coverflow: {
-                        rotate: 30,
+                        rotate: -1,
                         stretch: 10,
                         depth: 60,
                         modifier: 2,
                         slideShadows : true
                     }
-        })
+        });
         var slideReva = function(num) {
             revaSwiper.slideTo(num, 1000, false);
             $(".preview-left-btn").children().eq(num).addClass('active').siblings().removeClass('active');
-        }
+        };
+        var appSwiper = new Swiper('.app-preview .swiper-container', {
+            effect : 'coverflow',
+            slidesPerView: 2,
+            centeredSlides: true,
+            initialSlide :3,
+            simulateTouch : false,
+            coverflow: {
+                        rotate: -1,
+                        stretch: 70,
+                        depth: 80,
+                        modifier: 3,
+                        slideShadows : true
+                    }
+        });
+        var slideApp = function(num) {
+            appSwiper.slideTo(num, 1000, false);
+            $(".app-icon").children().eq(num).addClass('active').siblings().removeClass('active');
+        };
     </script>
 </body>
 </body>
