@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Home – LeWa makes life happier!</title>
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header class="header">
         <img src="img/logo.png" class="header-logo" width="135" height="60">
@@ -30,27 +32,102 @@
         <h1 class="top-introduction">An operating platform based on Android OS</h1>
         <p class="top-content">Based on the competitiveness on Android OS, the operating platform, RevaNow, contains REVA Mobile Service and REVA Backend System to manage and monetize data and traffic together with phone manufactures, by the means of providing contents distribution and big data analysis, OS-level system security and control mechanism.</p>
         <p class="top-content">We are proud to be a close partner of many worldwide phone brands in the past years, and we will always persist in developing this kind of relationship, and spare no effort to further your interests.</p>
+        <div class="top-demo">
+            <img src="img/icon_play_btn.png" width="55" height="55">
+            <p class="top-demo-text">SEE DEMO</p>
+        </div>
+    </div>
+    <div class="top-video">
+        <video id="video" width="640" height="480">
+            <source src="img/video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="customer-container">
+        <ul class="customer-promise">
+            <li>
+                <img src="img/promise.png" width="150" height="150">
+                <h2>PROMISE</h2>
+                <p>To initiate equal, faithful and law-abiding spirit of contract. To respect knowledge, advocate innovation, and protect intellectual property.</p>
+            </li>
+            <li>
+                <img src="img/users.png" width="150" height="150">
+                <h2>USERS</h2>
+                <p>To provide supreme products and services with perfect user experience. To listen to users’ heart sincerely, understand users’ demand deeply.</p>
+            </li>
+            <li>
+                <img src="img/happiness.png" width="150" height="150">
+                <h2>HAPPINESS</h2>
+                <p>To advocate briefness and efficiency, be happy and progressive. To be love-oriented, sincere and honest.</p>
+            </li>
+            <li>
+                <img src="img/sharing.png" width="150" height="150">
+                <h2>SHARING</h2>
+                <p>To be into sharing economy, create more development space for innovation.To be positive and open-minded, support and transfer positive energy.</p>
+            </li>
+        </ul>
+        <h2 class="customer-stories">Phone Brand</h2>
+        <div class="customer-logos">
+            <img src="img/phone_brand.png">
+        </div>
+        <h2 class="customer-stories">Mobile Advertising Platform</h2>
+        <div class="customer-logos">
+            <img src="img/phone_platform.png">
+        </div>
+        <ul class="customer-achieve">
+            <li>
+                <h4>User appraisal</h4>
+                <p class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+                <p class="contents">Our latest achievements: several Apps and the operating platform based on OS developed by LeWa have been launched successively, and the products are being promoted along with phone brands. <br> THANKS for your attention!</p>
+            </li>
+            <li>
+                <h4>Team building</h4>
+                <p class="stars"></p>
+                <p>MerryChristmas—Christmas and New Year are approaching. LeWa Reva wishes you peace, joy and happiness!
+                    <br>
+                    <br>
+                    <br> @lewa</p>
+            </li>
+            <li>
+                <h4>Information and reports</h4>
+                <p class="stars"></p>
+                <p class="contents">LeWa has reached strategic partnership with Karbonn. All Karbonn phones to be released will carry #KandyUI, which is a customized operating system developed by LeWa, exclusive for Karbonn. Quattro L50 HD is the first phone after reaching strategic partnership, and being sold in Indian market now.</p>
+            </li>
+            <li>
+                <h4>News</h4>
+                <p class="contents">Lewa Team had a business trip in India from early November, visited leading mobile advertising platforms including Inmobi, Affle, Airpush, Vserv, SVG Media and Indian local content providers Justdial and Zomato. LeWa and the promising partners conducted the multidimensional communication and achieved some consensus and cooperation. </p>
+            </li>
+        </ul>
     </div>
     <footer class="footer">
         <ul class="footer-pub">
-            <li> 
+            <li>
                 <h2>Contact Us</h2>
-                <a href="">Partner opportunities</a><br>
-                <a href="">partnership@lewatek.com</a><br>
+                <a href="">Partner opportunities</a>
+                <br>
+                <a href="">partnership@lewatek.com</a>
+                <br>
             </li>
             <li>
                 <h4>Company</h4>
-                <a href="">Home</a><br>
-                <a href="">About Us</a><br>
-                <a href="">Pricing</a><br>
-                <a href="">Contact Us</a><br>
+                <a href="">Home</a>
+                <br>
+                <a href="">About Us</a>
+                <br>
+                <a href="">Pricing</a>
+                <br>
+                <a href="">Contact Us</a>
+                <br>
             </li>
             <li>
                 <h4>Others</h4>
-                <a href="">Help & Support</a><br>
-                <a href="">Privacy Policy</a><br>
-                <a href="">Terms</a><br>
-                <a href="">Sitemap</a><br>
+                <a href="">Help & Support</a>
+                <br>
+                <a href="">Privacy Policy</a>
+                <br>
+                <a href="">Terms</a>
+                <br>
+                <a href="">Sitemap</a>
+                <br>
             </li>
             <li>
                 <h4>Newsletter</h4>
@@ -78,6 +155,23 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/swiper-3.4.1.jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+        $(".top-demo img").on('click', function(event) {
+            event.preventDefault();
+            $(".top-video").fadeIn(200);
+            $("#video")[0].play();
+        });
+        $(".top-video").on('click', function(event) {
+            event.preventDefault();
+            $(this).hide();
+            $("#video")[0].pause();
+        });
+        $("#video").on('click', function(event) {
+            event.preventDefault();
+            $("#video")[0].pause();
+            return false;
+        });
+    </script>
 </body>
 
 </html>
