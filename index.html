@@ -46,23 +46,23 @@
         <ul class="customer-promise">
             <li>
                 <img src="img/promise.png" width="150" height="150">
-                <h2>PROMISE</h2>
-                <p>To initiate equal, faithful and law-abiding spirit of contract. To respect knowledge, advocate innovation, and protect intellectual property.</p>
+                <h2>DMP</h2>
+                <p>collect, analyze and operate data, turning data into valuable asset and create more.</p>
             </li>
             <li>
                 <img src="img/users.png" width="150" height="150">
-                <h2>USERS</h2>
-                <p>To provide supreme products and services with perfect user experience. To listen to users’ heart sincerely, understand users’ demand deeply.</p>
+                <h2>User profile</h2>
+                <p>build user profile system associated with each specific user.</p>
             </li>
             <li>
                 <img src="img/happiness.png" width="150" height="150">
-                <h2>HAPPINESS</h2>
-                <p>To advocate briefness and efficiency, be happy and progressive. To be love-oriented, sincere and honest.</p>
+                <h2>Customization</h2>
+                <p>extend and enrich the brand image based on phone hardware.</p>
             </li>
             <li>
                 <img src="img/sharing.png" width="150" height="150">
-                <h2>SHARING</h2>
-                <p>To be into sharing economy, create more development space for innovation.To be positive and open-minded, support and transfer positive energy.</p>
+                <h2>Monetization</h2>
+                <p>maintain users and monetize traffic in the long term depending on data-centric solutions.</p>
             </li>
         </ul>
         <h2 class="customer-stories">Phone Brand</h2>
@@ -97,6 +97,26 @@
                 <p class="contents">Lewa Team had a business trip in India from early November, visited leading mobile advertising platforms including Inmobi, Affle, Airpush, Vserv, SVG Media and Indian local content providers Justdial and Zomato. LeWa and the promising partners conducted the multidimensional communication and achieved some consensus and cooperation. </p>
             </li>
         </ul>
+    </div>
+    <div class="data-board">
+        <ul class="data-value">
+            <li>
+                <p class="data-val-total">0</p>
+                <label id="data_top">Total users</label>
+            </li>
+            <li>
+                <p class="data-val-brands">0</p>
+                <label>Cooperative brands</label>
+            </li>
+            <li>
+                <p class="data-val-models">0</p>
+                <label>Models</label>
+            </li>
+        </ul>
+        <h2>Get <strong>In Touch</strong></h2>
+        <p>Make sure that people understand what you are trying to say. Whether in marketing, management, or just everyday conversations.<br> Through feedback, communication can be an effective tool in the world of business and everywhere else.</p>
+        <input type="text" name="email" placeholder="Write e-mail address..."><br>
+        <button type="submit">SUBSCRIBE</button>
     </div>
     <footer class="footer">
         <ul class="footer-pub">
@@ -156,19 +176,46 @@
     <script src="js/swiper-3.4.1.jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
+        $(window).scroll(function() {
+            var widowHeight = $(window).height();
+            var scroll_top = $(document).scrollTop();
+            var data_top = $('#data_top').offset().top - widowHeight;
+            if (scroll_top >= data_top) {
+                var $all = $('.data-value p')
+                    $total = $('.data-val-total'),
+                    $brands = $('.data-val-brands'),
+                    $models = $('.data-val-models');
+                var all = parseInt($total.html());
+                if(all < 30){
+                   $all.html(++all);
+                   setTimeout(arguments.callee,50);
+                } else {
+                    $total.html('50,000,000');
+                    $brands.html('30+');
+                    $models.html('200+');
+                }
+                
+            }
+        });
+        var videoDemo = $("#video")[0];
         $(".top-demo img").on('click', function(event) {
             event.preventDefault();
             $(".top-video").fadeIn(200);
-            $("#video")[0].play();
+            videoDemo.play();
         });
         $(".top-video").on('click', function(event) {
             event.preventDefault();
             $(this).hide();
-            $("#video")[0].pause();
+            videoDemo.pause();
+            videoDemo.currentTime = 0;
         });
         $("#video").on('click', function(event) {
             event.preventDefault();
-            $("#video")[0].pause();
+            if (videoDemo.paused) {
+                videoDemo.play();
+            } else {
+                videoDemo.pause();
+            }
             return false;
         });
     </script>

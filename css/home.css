@@ -28,6 +28,7 @@
 	top: 50%;
 	margin-top: -240px;
 	margin-left: -320px;
+	cursor: pointer;
 }
 
 .customer-container {
@@ -101,4 +102,72 @@
 }
 .customer-achieve .contents {
 	line-height: 24px;
+}
+.data-board {
+    background: linear-gradient(#3E65BC, #1FA0EA);
+    filter: progid: DXImageTransform.Microsoft.Gradient(startColorStr=#3E65BC, endColorStr=#1FA0EA);
+    padding: 80px 0;
+    text-align: center;
+}
+.data-board .data-value {
+	width: 80%;
+	min-width: 980px;
+	height: 528px;
+	margin: 0 auto;
+	padding-top: 150px;
+	background-image: url(../img/bg_world.png);
+	background-size: 90% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 0;
+}
+.data-value li {
+	display: inline-block;
+	width: 30%;
+}
+.data-value li > p {
+	font-size: 50px;
+	color: #fff;
+}
+.data-value li > label {
+	font-size: 20px;
+	color: rgba(255, 255, 255, 0.78)
+}
+.data-board > h2 {
+	font-size: 46px;
+	color: #fff;
+	font-weight: lighter;
+	margin-top: -50px;
+	padding-bottom: 76px;
+}
+.data-board > p {
+	color: #fff;
+	padding-bottom: 80px;
+}
+.data-board input[name="email"] {
+	width: 60%;
+	height: 56px;
+	background: #fff;
+	border: 0;
+	border-radius: 4px;
+	text-align: center;
+}
+.data-board button {
+	width: 220px;
+	height: 55px;
+	margin-top: 80px;
+	background: transparent;
+	color: #fff;
+	border: 1px solid #FFFFFF;
+	border-radius: 4px;
+	text-align: center;
+	cursor: pointer;
+}
+.data-board button:hover {
+	border-color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.5);
+}
+.data-board button:active {
+	border-color: rgba(255, 255, 255, 0.8);
+	color: rgba(255, 255, 255, 0.8);
 }
