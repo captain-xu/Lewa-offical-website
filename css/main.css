@@ -1,5 +1,4 @@
-    .header {
-    font-family: 'SFNSText';
+.header {
     position: absolute;
     left: 5%;
     top: 0;
@@ -15,17 +14,6 @@
     vertical-align: top;
 }
 
-.header .header-call {
-    display: inline-block;
-    vertical-align: top;
-    height: 40px;
-    line-height: 40px;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 10px 15px;
-    padding-left: 15px;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-}
 
 .header .header-nav {
     color: #fff;
@@ -36,9 +24,10 @@
 
 .header .header-nav>li {
     display: inline-block;
-    width: 90px;
+    min-width: 90px;
     height: 32px;
     line-height: 32px;
+    padding: 0 10px;
     font-size: 13px;
     text-align: center;
     cursor: pointer;
@@ -49,7 +38,6 @@
 .header .header-nav>li.active {
     background: rgba(255, 255, 255, 0.35);
     border-radius: 2px;
-    font-weight: bold;
 }
 
 .header .header-nav>li>a {

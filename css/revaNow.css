@@ -21,11 +21,11 @@
 }
 
 .top-img-wrip .top-rms {
-    background-image: url(../img/rms.png);
+    background-image: url(../img/reva_rms.png);
 }
 
 .top-img-wrip .top-rbs {
-    background-image: url(../img/rbs.png);
+    background-image: url(../img/reva_rbs.png);
 }
 
 .top-img-wrip .top-rms:hover,
@@ -63,12 +63,12 @@
     color: #152844;
     text-align: center;
     font-weight: normal;
-    font-size: 48px;
+    font-size: 46px;
     padding: 0 10%;
 }
 
 .modular-container .modular-introduction {
-    padding: 24px 0 110px;
+    padding: 24px 20% 110px;
     font-size: 18px;
     color: #849EB0;
     text-align: center;
@@ -103,61 +103,67 @@
 }
 
 .modular-preview .preview-left-btn>li:nth-child(1) {
-    background-image: url(../img/icon_dataTracker.png);
+    background-image: url(../img/reva_tracker.png);
 }
 
 .modular-preview .preview-left-btn>li:nth-child(2) {
-    background-image: url(../img/icon_saleTracker.png);
+    background-image: url(../img/reva_ad.png);
 }
 
 .modular-preview .preview-left-btn>li:nth-child(3) {
-    background-image: url(../img/icon_query.png);
+    background-image: url(../img/reva_push.png);
 }
 
 .modular-preview .preview-left-btn>li:nth-child(4) {
-    background-image: url(../img/icon_adPlatform.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(5) {
-    background-image: url(../img/icon_push.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(6) {
-    background-image: url(../img/icon_update.png);
+    background-image: url(../img/reva_update.png);
 }
 
 .modular-preview .preview-left-btn>li:nth-child(1).active {
-    background-image: url(../img/icon_dataTrackerActive.png);
+    background-image: url(../img/reva_trackerActive.png);
 }
 
 .modular-preview .preview-left-btn>li:nth-child(2).active {
-    background-image: url(../img/icon_saleTrackerActive.png);
+    background-image: url(../img/reva_adActive.png);
 }
 
 .modular-preview .preview-left-btn>li:nth-child(3).active {
-    background-image: url(../img/icon_queryActive.png);
+    background-image: url(../img/reva_pushActive.png);
 }
 
 .modular-preview .preview-left-btn>li:nth-child(4).active {
-    background-image: url(../img/icon_adPlatformActive.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(5).active {
-    background-image: url(../img/icon_pushActive.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(6).active {
-    background-image: url(../img/icon_updateActive.png);
+    background-image: url(../img/reva_updateActive.png);
 }
 
 .modular-preview .preview-right {
     float: left;
     padding-left: 10%;
-    width: calc(100% - 250px);
+    width: calc(100% - 300px);
+}
+.modular-data {
+    width: 90%;
+    margin: 0 auto;
+    padding: 100px 0;
+    font-size: 0;
+}
+.modular-data > li {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    vertical-align: top;
+}
+.modular-data > li > p {
+    font-size: 50px;
+    padding-bottom: 20px;
+    color: #152844;
+}
+.modular-data > li > label {
+    font-size: 20px;
+    color: #B8BEC6;
 }
 
 .preview-right .swiper-container {
     width: 100%;
+    max-width: 780px;
     height: 650px;
     box-shadow: 0 12px 42px 12px rgba(0, 0, 0, 0.08);
 }
@@ -254,34 +260,53 @@
 	height: 100%;
 }
 .app-preview img {
-	width: 100%;
+	width: 280px;
 	height: 100%;
 }
-
-.detail-container{
-	width: 100%;
-	padding: 172px 5% 0 10%;
+.app-preview video {
+    display: none;
+    width: 280px;
+    height: 450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -140px;
+    margin-top: -230px;
 }
-.detail-container .detail-left-wrip {
-	display: inline-block;
-	vertical-align: top;
-	width: 38%;
+.app-preview .app-video-btn {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    cursor: pointer;
 }
-.detail-left-wrip>h2 {
-	color: #64779D;
-	padding-bottom: 24px;
-}
-.detail-container .detail-right-wrip {
-	display: inline-block;
-	vertical-align: top;
-	margin-top: -80px;
-	width: 60%;
-	height: 430px;
-	background-image: url(../img/bg_world_color.png);
-	background-size: 100% 100%;
-}
-.detail-right-wrip>img {
-    position: relative;
-    left: 30%;
-    top: 100px;
-}
+// .detail-container{
+// 	width: 100%;
+// 	padding: 172px 5% 0 10%;
+// }
+// .detail-container .detail-left-wrip {
+// 	display: inline-block;
+// 	vertical-align: top;
+// 	width: 38%;
+// }
+// .detail-left-wrip>h2 {
+// 	color: #64779D;
+// 	padding-bottom: 24px;
+// }
+// .detail-container .detail-right-wrip {
+// 	display: inline-block;
+// 	vertical-align: top;
+// 	margin-top: -80px;
+// 	width: 60%;
+// 	height: 430px;
+// 	background-image: url(../img/bg_world_color.png);
+// 	background-size: 100% 100%;
+// }
+// .detail-right-wrip>img {
+//     position: relative;
+//     left: 30%;
+//     top: 100px;
+// }

@@ -103,6 +103,17 @@
 .customer-achieve .contents {
 	line-height: 24px;
 }
+.customer-achieve .news-left {
+    width: 55%;
+    float: left;
+    height: 175px;
+    margin-right: 3%;
+}
+.customer-achieve .news-right {
+    width: 42%;
+    float: left;
+    height: 175px;
+}
 .data-board {
     background: linear-gradient(#3E65BC, #1FA0EA);
     filter: progid: DXImageTransform.Microsoft.Gradient(startColorStr=#3E65BC, endColorStr=#1FA0EA);
