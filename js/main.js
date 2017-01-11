@@ -10,7 +10,6 @@ $(document).ready(function() {
 	  	}
 	});
     $("#to-top").on('click', function() {
-    	var speed = 200;
-        $('body,html').animate({ scrollTop: 0 }, speed);
+        $('body,html').animate({ scrollTop: 0 }, 200);
         return false;
     });
