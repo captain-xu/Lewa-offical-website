@@ -1,0 +1,29 @@
+{
+  "name": "lewa",
+  "version": "1.0.0",
+  "description": "official",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jianxu-captain/Lewa-offical-website.git"
+  },
+  "keywords": [
+    "lewa"
+  ],
+  "author": "jianxu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jianxu-captain/Lewa-offical-website/issues"
+  },
+  "homepage": "https://github.com/jianxu-captain/Lewa-offical-website#readme",
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "jquery": "^3.1.1",
+    "style-loader": "^0.13.1",
+    "swiper": "^3.4.1",
+    "webpack": "^1.14.0"
+  }
+}
