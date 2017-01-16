@@ -72,23 +72,23 @@
         <h2 class="modular-title"><strong>REVA</strong> BY The Numbers</h2>
         <ul class="modular-data">
             <li>
-                <p class="modular-data-total">0</p>
+                <p class="modular-data-ad">0</p>
                 <label id="modular_data_top">Ad Platforms</label>
             </li>
             <li>
-                <p class="modular-data-total">0</p>
+                <p class="modular-data-monthly">0</p>
                 <label>App Requests Monthly</label>
             </li>
             <li>
-                <p class="modular-data-total">0</p>
+                <p class="modular-data-campaign">0</p>
                 <label>Campaigns</label>
             </li>
             <li>
-                <p class="modular-data-total">0</p>
+                <p class="modular-data-countries">0</p>
                 <label>Countries</label>
             </li>
             <li>
-                <p class="modular-data-total">0</p>
+                <p class="modular-data-unique">0</p>
                 <label>ion Unique Users</label>
             </li>
         </ul>
@@ -220,8 +220,35 @@
     <div id="to-top">
         <i class="fa fa-arrow-up"></i>
     </div>
-    <script src="../bundle.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper-3.4.1.jquery.min.js"></script>
+    <script src="../js/main.js"></script>
     <script>
+        $(window).scroll(function() {
+            var widowHeight = $(window).height();
+            var scroll_top = $(document).scrollTop();
+            var data_top = $('#modular_data_top').offset().top - widowHeight;
+            if (scroll_top >= data_top) {
+                var $all = $('.modular-data p')
+                    $ad = $('.modular-data-ad'),
+                    $monthly = $('.modular-data-monthly'),
+                    $campaign = $('.modular-data-campaign');
+                    $countries = $('.modular-data-countries');
+                    $unique = $('.modular-data-unique');
+                var all = parseInt($ad.html());
+                if(all < 30){
+                   $all.html(++all);
+                   setTimeout(arguments.callee,50);
+                } else {
+                    $ad.html('50+');
+                    $monthly.html('10 Billion');
+                    $campaign.html('1100+');
+                    $countries.html('30+');
+                    $unique.html('20 Mill');
+                }
+                
+            }
+        });
         var revaSwiper = new Swiper('.preview-right .swiper-container', {
             effect : 'coverflow',
             slidesPerView: 1.2,
