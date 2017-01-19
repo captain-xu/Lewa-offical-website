@@ -1,19 +1,26 @@
 .header {
-    position: absolute;
-    left: 5%;
+    position: fixed;
     top: 0;
+    left: 5%;
     width: 90%;
     height: 80px;
     padding: 10px 5%;
     background: transparent;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 1;
+    z-index: 10;
+    transition: height 0.5s, padding 0.5s, background 0.5s;
+}
+.header.active {
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0px 5%;
+    background: rgba(0,0,0,0.3);
 }
 
 .header .header-logo {
     vertical-align: top;
 }
-
 
 .header .header-nav {
     color: #fff;
@@ -54,27 +61,52 @@
     padding-top: 320px;
     color: #fff;
     text-align: center;
-    background-size: 100% 100%;
+    background-color: #000;
+    background-size: 1800px 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .top-container .top-logo {
+    position: relative;
     width: 160px;
     height: 40px;
+    animation: logoslide 1.5s ease 0s 1;
+    -webkit-animation: logoslide 1.5s ease 0s 1; /* Safari and Chrome */
 }
 
 .top-container .top-introduction {
+    position: relative;
     font-size: 39px;
+    font-weight: normal;
     margin: 0;
     padding-top: 90px;
     padding-bottom: 60px;
+    animation: logoslide 1.5s ease 0s 1;
+    -webkit-animation: logoslide 1.5s ease 0s 1; /* Safari and Chrome */
 }
 
 .top-container .top-content {
+    position: relative;
     width: 80%;
+    line-height: 26px;
     margin: 0 auto;
     font-size: 16px;
     text-align: left;
-    color: rgba(255, 255, 255, 0.82)
+    color: rgba(255, 255, 255, 0.82);
+    animation: logoslide 1.5s ease 0s 1;
+    -webkit-animation: logoslide 1.5s ease 0s 1; /* Safari and Chrome */
+}
+@keyframes logoslide
+{
+    from {top: 100px;opacity: 0}
+    to {top: 0px;opacity: 1}
+}
+
+@-webkit-keyframes logoslide /* Safari and Chrome */
+{
+    from {top: 100px;opacity: 0}
+    to {top: 0px;opacity: 1}
 }
 
 .footer {
