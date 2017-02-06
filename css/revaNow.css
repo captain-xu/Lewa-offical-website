@@ -231,8 +231,8 @@
 }
 
 .app-icon>li:hover>img {
-    width: 70px;
-    height: 70px;
+    width: 62px;
+    height: 62px;
     margin-bottom: 16px;
 }
 
@@ -248,8 +248,8 @@
 }
 
 .app-icon>li.active>img {
-    width: 70px;
-    height: 70px;
+    width: 62px;
+    height: 62px;
     color: #00B9F7;
 }
 
@@ -292,6 +292,17 @@
     margin-left: -25px;
     margin-top: -25px;
     cursor: pointer;
+}
+.app-cover {
+    position: relative;
+    top: -115px;
+    width: 100%;
+    height: 115px;
+    background: #fff;
+    z-index: 2;
+}
+.footer {
+    margin: 0px auto 100px;
 }
 // .detail-container{
 // 	width: 100%;

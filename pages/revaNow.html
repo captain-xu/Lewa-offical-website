@@ -126,46 +126,47 @@
             </li>
         </ul>
         <div class="app-preview">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="../img/rms_discover.png">
-                            <img class="app-video-btn" src="../img/icon_play_btn.png">
-                            <video>
-                                <source src="../img/rms_discover.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../img/rms_news.png">
-                            <img class="app-video-btn" src="../img/icon_play_btn.png">
-                            <video>
-                                <source src="../img/rms_news.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../img/rms_launcher.png">
-                            <img class="app-video-btn" src="../img/icon_play_btn.png">
-                            <video>
-                                <source src="../img/rms_launcher.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../img/rms_xscreen.png">
-                            <img class="app-video-btn" src="../img/icon_play_btn.png">
-                            <video>
-                                <source src="../img/rms_xscreen.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../img/rms_lockscreen.png">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../img/rms_xender.png">
-                        </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../img/rms_discover.png">
+                        <img class="app-video-btn" src="../img/icon_play_btn.png">
+                        <video>
+                            <source src="../img/rms_discover.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/rms_news.png">
+                        <img class="app-video-btn" src="../img/icon_play_btn.png">
+                        <video>
+                            <source src="../img/rms_news.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/rms_launcher.png">
+                        <img class="app-video-btn" src="../img/icon_play_btn.png">
+                        <video>
+                            <source src="../img/rms_launcher.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/rms_xscreen.png">
+                        <img class="app-video-btn" src="../img/icon_play_btn.png">
+                        <video>
+                            <source src="../img/rms_xscreen.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/rms_lockscreen.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/rms_xender.png">
                     </div>
                 </div>
+            </div>
         </div>
     </div>
+    <div class="app-cover"></div>
     <footer class="footer">
         <ul class="footer-pub">
             <li> 
@@ -261,22 +262,30 @@
             slidesPerView: 2,
             centeredSlides: true,
             initialSlide :2,
-            simulateTouch : false,
+            slideToClickedSlide:true,
             coverflow: {
                         rotate: -1,
                         stretch: 66,
                         depth: 80,
                         modifier: 3,
                         slideShadows : false
-                    }
+            },
+            onSlideChangeStart: function(swiper){
+                slideIndex(swiper.activeIndex);
+            }
         });
         var slideApp = function(num) {
             appSwiper.slideTo(num, 1000, false);
+            slideIndex(num);
+        };
+        function slideIndex(num) {
             $(".app-icon").children().eq(num).addClass('active').siblings().removeClass('active');
             var videoPlay = $(".app-preview").find('video');
             videoPlay.hide();
-            videoPlay[0].pause();
-            videoPlay[0].currentTime = 0;
+            for (var i = 0; i < videoPlay.length; i++) {
+                videoPlay[i].pause();
+                videoPlay[i].currentTime = 0;
+            }
         };
 
         $(".app-video-btn").on('click', function(event) {
