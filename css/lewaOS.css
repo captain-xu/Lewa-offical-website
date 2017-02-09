@@ -1,58 +1,13 @@
 .top-container {
-    background-image: url(../img/bg_reva.jpg);
+    background-image: url(../img/bg_os.png);
 }
-
-.top-img-wrip {
-    width: 100%;
-    position: absolute;
-    bottom: -168px;
-    cursor: pointer;
-    font-size: 0;
-    text-align: center;
+.top-container .top-introduction {
+    position: relative;
+    padding-top: 0;
 }
-
-.top-img-wrip>div {
-    display: inline-block;
-    width: 40%;
-    max-width: 636px;
-    height: 336px;
-    background-size: 100% 100%;
-    transition: background-size 1s linear;
-}
-
-.top-img-wrip .top-rms {
-    background-image: url(../img/reva_rms.png);
-}
-
-.top-img-wrip .top-rbs {
-    background-image: url(../img/reva_rbs.png);
-}
-
-.top-img-wrip .top-rms:hover,
-.top-img-wrip .top-rbs:hover {
-    background-size: 105% 105%;
-}
-
-.top-img-shade {
-    width: 100%;
-    height: 100%;
-    padding-top: 124px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.75);
-    box-shadow: 0 12px 42px 12px rgba(0, 0, 0, 0.08);
-}
-
-.top-img-shade p {
-    font-size: 40px;
-    font-weight: bold;
-    color: #404D73;
-    margin-bottom: 24px;
-}
-
-.top-img-shade span {
-    font-size: 24px;
-    color: #2E3E6A;
-    opacity: .5;
+.top-content {
+    padding-bottom: 20px;
+    letter-spacing: 0.56px;
 }
 
 .modular-container {
@@ -67,12 +22,12 @@
     padding: 0 10%;
 }
 
-// .modular-container .modular-introduction {
-//     padding: 24px 20% 110px;
-//     font-size: 18px;
-//     color: #849EB0;
-//     text-align: center;
-// }
+.modular-container .modular-introduction {
+    padding: 24px 20% 110px;
+    font-size: 18px;
+    color: #849EB0;
+    text-align: center;
+}
 
 .modular-container .modular-preview {
     width: 100%;
@@ -80,24 +35,25 @@
 }
 
 .modular-preview .preview-left {
+    float: left;
+    width: 250px;
     letter-spacing: 12px;
-    text-align: center;
-    padding: 78px 0;
 }
 
-// .modular-preview .preview-left-title {
-//     color: #2F5F7B;
-//     font-size: 24px;
-//     text-align: center;
-//     padding-bottom: 35px;
-//     letter-spacing: 0;
-// }
+.modular-preview .preview-left-title {
+    color: #2F5F7B;
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 35px;
+    letter-spacing: 0;
+}
 
 .modular-preview .preview-left-btn>li {
     display: inline-block;
     width: 115px;
     height: 115px;
     cursor: pointer;
+    margin-bottom: 20px;
     background-size: 100% 100%;
 }
 
@@ -133,66 +89,46 @@
     background-image: url(../img/reva_updateActive.png);
 }
 
-// .modular-preview .preview-right {
-//     padding-left: 10%;
-// }
-.data-wriper {
-    padding: 100px 0;
-    background-image: url(../img/bg_world.png);
-    background-position: center 0;
-    background-repeat: no-repeat;
-    // background-size: 80% 100%;
+.modular-preview .preview-right {
+    float: left;
+    padding-left: 10%;
+    width: calc(100% - 300px);
 }
-.data-title {
-    color: #fff;
-    text-align: center;
-    font-weight: normal;
-    font-size: 46px;
-    padding: 0 10%;
-}
-.data-content {
+.modular-data {
     width: 90%;
     margin: 0 auto;
-    padding: 200px 0;
+    padding: 100px 0;
     font-size: 0;
 }
-.data-content > li {
+.modular-data > li {
     display: inline-block;
     width: 20%;
     text-align: center;
     vertical-align: top;
 }
-.data-content > li > p {
+@media screen and (max-width: 1250px) {
+    .modular-data > li:nth-child(2),
+    .modular-data > li:nth-child(5) {
+        width: 26%;
+    }
+    .modular-data > li:nth-child(1),
+    .modular-data > li:nth-child(4) {
+        width: 14%;
+    }
+}
+.modular-data > li > p {
     font-size: 50px;
     padding-bottom: 20px;
-    color: #fff;
+    color: #152844;
 }
-.data-content > li > label {
+.modular-data > li > label {
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.35);
-}
-@media screen and (max-width: 1380px) {
-    .data-content > li > p {
-        font-size: 42px;
-    }
-}
-@media screen and (max-width: 1250px) {
-    .data-content > li > p {
-        font-size: 36px;
-    }
-    .data-content > li > label {
-        font-size: 18px;
-    }
-}
-@media screen and (max-width: 980px) {
-    .data-content > li > p {
-        font-size: 32px;
-    }
+    color: #B8BEC6;
 }
 
 .preview-right .swiper-container {
     width: 100%;
-    max-width: 980px;
+    max-width: 780px;
     height: 650px;
     box-shadow: 0 12px 42px 12px rgba(0, 0, 0, 0.08);
 }
@@ -207,8 +143,8 @@
     padding-top: 180px;
     text-align: center;
     color: #fff;
-    background: linear-gradient(#0E356D, #4D6EB8);
-    filter: progid: DXImageTransform.Microsoft.Gradient(startColorStr=#0E356D, endColorStr=#4D6EB8);
+    background: linear-gradient(#2B406D, #4E5F84);
+    filter: progid: DXImageTransform.Microsoft.Gradient(startColorStr=#2B406D, endColorStr=#4E5F84);
 }
 
 .app-container .app-title {

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/swiper-3.4.1.min.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/revaNow.css">
+    <link rel="stylesheet" href="../css/lewaOS.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 
@@ -17,39 +17,23 @@
         <img src="../img/logo_lewa.png" class="header-logo" width="135" height="60">
         <ul class="header-nav">
             <li><a href="../index.html">HOME</a></li>
-            <li class="active">RevaNow</li>
-            <li><a href="lewaOS.html">LEWA OS</a></li>
+            <li><a href="revaNow.html">RevaNow</a></li>
+            <li class="active">LEWA OS</li>
             <li><a href="aboutUs.html">CONTACT US</a></li>
         </ul>
     </header>
     <div class="top-container">
-        <img src="../img/logo_reva.png" class="top-logo">
-        <h1 class="top-introduction">An operating platform based on Android OS</h1>
-        <p class="top-content">Based on the competitiveness on Android OS, the operating platform, RevaNow, contains REVA Mobile Service and REVA Backend System to manage and monetize data and traffic together with phone manufactures, by the means of providing contents distribution and big data analysis, OS-level system security and control mechanism.</p>
-        <p class="top-content">We are proud to be a close partner of many worldwide phone brands in the past years, and we will always persist in developing this kind of relationship, and spare no effort to further your interests.</p>
-        <div class="top-img-wrip">
-            <div class="top-rms">
-                <a href="#RMS">
-                    <div class="top-img-shade">
-                        <p>RMS</p>
-                        <span>REVA Mobile Service</span>
-                    </div>
-                </a>
-            </div>
-            <div class="top-rbs">
-                <div class="top-img-shade">
-                    <p>RBS</p>
-                    <span>REVA Backend System</span>
-                </div>
-            </div>
-        </div>
+        <h1 class="top-introduction">LeWa OS</h1> 
+        <p class="top-content">Founded in April 2011, LeWa Mobile Limited is a mobile internet company located in Zhangjiang High-Tech Software Park (HQ), providing Android ROM with in-depth customization and Operating Platform with distributive services and contents as well.</p>
+        <p class="top-content"><strong>LeWaOS</strong> creates more chances and enhances competitiveness for worldwide OEMs, moreover, supplies more smart equipment with connectivity capability and service. The achievement lies in the integration from underlying architecture, protocol layer, data and algorithm, privacy and security, multi-media, interaction, visual design to supply chain and localized services.</p>
+        <p class="top-content"><strong>REVA Operating Platform</strong> serves brand vendors, manufactures and advertisers to attract and keep end users’ stickiness, maximize the profitability of mobile device industry by the means of supplying contents distribution and big data presentation, OS-level system security and control mechanism.</p>
     </div>
     <div class="modular-container">
         <h2 class="modular-title"><strong>RBS</strong> data analytics and advertising platform</h2>
-        <!-- <p class="modular-introduction">RBS is integrating our own apps and global leading advertising platforms to monetize the traffic we have been acquiring. We collect data and output data report after performing multi-dimension analysis, which contributes to better user experience and longer-term strategy for growth to us and our partners.</p> -->
-        <div class="modular-preview">
+        <p class="modular-introduction">RBS is integrating our own apps and global leading advertising platforms to monetize the traffic we have been acquiring. We collect data and output data report after performing multi-dimension analysis, which contributes to better user experience and longer-term strategy for growth to us and our partners.</p>
+        <div class="modular-preview clearfix">
             <div class="preview-left">
-                <!-- <h3 class="preview-left-title">Our Improvements</h3> -->
+                <h3 class="preview-left-title">Our Improvements</h3>
                 <ul class="preview-left-btn">
                     <li onclick="slideReva(0)" class="active"></li>
                     <li onclick="slideReva(1)"></li>
@@ -68,34 +52,32 @@
                 </div>
             </div>
         </div>
+        <h2 class="modular-title"><strong>REVA</strong> BY The Numbers</h2>
+        <ul class="modular-data">
+            <li>
+                <p class="modular-data-ad">0</p>
+                <label id="modular_data_top">Ad Platforms</label>
+            </li>
+            <li>
+                <p class="modular-data-monthly">0</p>
+                <label>App Requests Monthly</label>
+            </li>
+            <li>
+                <p class="modular-data-campaign">0</p>
+                <label>Campaigns</label>
+            </li>
+            <li>
+                <p class="modular-data-countries">0</p>
+                <label>Countries</label>
+            </li>
+            <li>
+                <p class="modular-data-unique">0</p>
+                <label>Unique Users</label>
+            </li>
+        </ul>
     </div>
     <a name="RMS"></a>
     <div class="app-container">
-        <div class="data-wriper">
-            <h2 class="data-title"><strong>REVA</strong> BY The Numbers</h2>
-            <ul class="data-content">
-                <li>
-                    <p class="data-content-ad">0</p>
-                    <label id="data_content_top">Ad Platforms</label>
-                </li>
-                <li>
-                    <p class="data-content-monthly">0</p>
-                    <label>App Requests Monthly</label>
-                </li>
-                <li>
-                    <p class="data-content-campaign">0</p>
-                    <label>Campaigns</label>
-                </li>
-                <li>
-                    <p class="data-content-countries">0</p>
-                    <label>Countries</label>
-                </li>
-                <li>
-                    <p class="data-content-unique">0</p>
-                    <label>Unique Users</label>
-                </li>
-            </ul>
-        </div>
         <h2 class="app-title"><strong>RMS</strong>-App groups</h2>
         <h3 class="app-subtitle"><em>Experience + Service</em></h3>
         <p class="app-content">
@@ -220,14 +202,14 @@
         $(window).scroll(function() {
             var widowHeight = $(window).height();
             var scroll_top = $(document).scrollTop();
-            var data_top = $('#data_content_top').offset().top - widowHeight;
+            var data_top = $('#modular_data_top').offset().top - widowHeight;
             if (scroll_top >= data_top) {
-                var $all = $('.data-content p')
-                    $ad = $('.data-content-ad'),
-                    $monthly = $('.data-content-monthly'),
-                    $campaign = $('.data-content-campaign');
-                    $countries = $('.data-content-countries');
-                    $unique = $('.data-content-unique');
+                var $all = $('.modular-data p')
+                    $ad = $('.modular-data-ad'),
+                    $monthly = $('.modular-data-monthly'),
+                    $campaign = $('.modular-data-campaign');
+                    $countries = $('.modular-data-countries');
+                    $unique = $('.modular-data-unique');
                 var all = parseInt($ad.html());
                 if(all < 30){
                    $all.html(++all);
@@ -246,23 +228,17 @@
             effect : 'coverflow',
             slidesPerView: 1.2,
             centeredSlides: true,
-            slideToClickedSlide:true,
+            simulateTouch : false,
             coverflow: {
                 rotate: -1,
                 stretch: 10,
                 depth: 60,
                 modifier: 2,
                 slideShadows : false
-            },
-            onSlideChangeStart: function(swiper){
-                slideRevaIndex(swiper.activeIndex);
             }
         });
         var slideReva = function(num) {
             revaSwiper.slideTo(num, 1000, false);
-            slideRevaIndex(num);
-        };
-        function slideRevaIndex(num) {
             $(".preview-left-btn").children().eq(num).addClass('active').siblings().removeClass('active');
         };
         var appSwiper = new Swiper('.app-preview .swiper-container', {
@@ -279,14 +255,14 @@
                         slideShadows : false
             },
             onSlideChangeStart: function(swiper){
-                slideAppIndex(swiper.activeIndex);
+                slideIndex(swiper.activeIndex);
             }
         });
         var slideApp = function(num) {
             appSwiper.slideTo(num, 1000, false);
-            slideAppIndex(num);
+            slideIndex(num);
         };
-        function slideAppIndex(num) {
+        function slideIndex(num) {
             $(".app-icon").children().eq(num).addClass('active').siblings().removeClass('active');
             var videoPlay = $(".app-preview").find('video');
             videoPlay.hide();
