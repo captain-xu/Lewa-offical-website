@@ -74,7 +74,20 @@
             </ul>
         </li>
         <li class="data-wrip">
-            
+            <ul>
+                <li>
+                    <p class="data-version">0</p>
+                    <label id="data_top">Versions</label>
+                </li>
+                <li>
+                    <p class="data-brand">0</p>
+                    <label>Cooperative brands</label>
+                </li>
+                <li>
+                    <p class="data-model">0</p>
+                    <label>Models</label>
+                </li>
+            </ul>
         </li>
     </ol>
     <footer class="footer">
@@ -108,10 +121,10 @@
             </li>
         </ul>
         <div class="copyright">
-            <a href="">Home | </a>
-            <a href="">LeWa OS | </a>
-            <a href="">RevaNow | </a>
-            <a href="">About LeWa &copy; 2011-2016 LeWa Co., Ltd</a>
+            <a href="../index.html">Home | </a>
+            <a href="lewaOS.html">LeWa OS | </a>
+            <a href="revaNow.html">RevaNow | </a>
+            <a href="aboutUs.html">About LeWa &copy; 2011-2016 LeWa Co., Ltd</a>
             <div class="society">
                 <a href="https://twitter.com/Lewa_OS" target="_blank"><i class="fa fa-twitter-square"></i></a>
                 <a href="https://www.facebook.com/LeWaOSofficial/" target="_blank"><i class="fa fa-facebook-square"></i></a>
@@ -128,80 +141,23 @@
         $(window).scroll(function() {
             var widowHeight = $(window).height();
             var scroll_top = $(document).scrollTop();
-            var data_top = $('#modular_data_top').offset().top - widowHeight;
+            var data_top = $('#data_top').offset().top - widowHeight;
             if (scroll_top >= data_top) {
-                var $all = $('.modular-data p')
-                    $ad = $('.modular-data-ad'),
-                    $monthly = $('.modular-data-monthly'),
-                    $campaign = $('.modular-data-campaign');
-                    $countries = $('.modular-data-countries');
-                    $unique = $('.modular-data-unique');
-                var all = parseInt($ad.html());
+                var $all = $('.data-wrip p')
+                    $version = $('.data-version'),
+                    $brand = $('.data-brand'),
+                    $model = $('.data-model');
+                var all = parseInt($version.html());
                 if(all < 30){
                    $all.html(++all);
                    setTimeout(arguments.callee,50);
                 } else {
-                    $ad.html('50+');
-                    $monthly.html('10 Billion');
-                    $campaign.html('1100+');
-                    $countries.html('30+');
-                    $unique.html('20 Million');
+                    $version.html('180');
+                    $brand.html('36');
+                    $model.html('176');
                 }
                 
             }
-        });
-        var revaSwiper = new Swiper('.preview-right .swiper-container', {
-            effect : 'coverflow',
-            slidesPerView: 1.2,
-            centeredSlides: true,
-            simulateTouch : false,
-            coverflow: {
-                rotate: -1,
-                stretch: 10,
-                depth: 60,
-                modifier: 2,
-                slideShadows : false
-            }
-        });
-        var slideReva = function(num) {
-            revaSwiper.slideTo(num, 1000, false);
-            $(".preview-left-btn").children().eq(num).addClass('active').siblings().removeClass('active');
-        };
-        var appSwiper = new Swiper('.app-preview .swiper-container', {
-            effect : 'coverflow',
-            slidesPerView: 2,
-            centeredSlides: true,
-            initialSlide :2,
-            slideToClickedSlide:true,
-            coverflow: {
-                        rotate: -1,
-                        stretch: 66,
-                        depth: 80,
-                        modifier: 3,
-                        slideShadows : false
-            },
-            onSlideChangeStart: function(swiper){
-                slideIndex(swiper.activeIndex);
-            }
-        });
-        var slideApp = function(num) {
-            appSwiper.slideTo(num, 1000, false);
-            slideIndex(num);
-        };
-        function slideIndex(num) {
-            $(".app-icon").children().eq(num).addClass('active').siblings().removeClass('active');
-            var videoPlay = $(".app-preview").find('video');
-            videoPlay.hide();
-            for (var i = 0; i < videoPlay.length; i++) {
-                videoPlay[i].pause();
-                videoPlay[i].currentTime = 0;
-            }
-        };
-
-        $(".app-video-btn").on('click', function(event) {
-            event.preventDefault();
-            $(this).next().show();
-            $(this).next()[0].play();
         });
     </script>
 </body>

@@ -37,7 +37,21 @@
     background-size: 100% 100%;
 }
 .data-wrip {
-    height: 400px;
     background: linear-gradient(#FF9F2B, #FFAD2C);
     filter: progid: DXImageTransform.Microsoft.Gradient(startColorStr=#FF9F2B, endColorStr=#FFAD2C);
+}
+.data-wrip ul {
+    font-size: 0;
+}
+.data-wrip ul li {
+    width: 33%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+.data-wrip p {
+    font-size: 40px;
+}
+.data-wrip label {
+    font-size: 18px;
 }
