@@ -1,288 +1,43 @@
 .top-container {
+    height: 620px;
     background-image: url(../img/bg_os.png);
 }
 .top-container .top-introduction {
     position: relative;
     padding-top: 0;
 }
-.top-content {
-    padding-bottom: 20px;
-    letter-spacing: 0.56px;
-}
 
-.modular-container {
-    padding-top: 300px;
+.os-container > li {
+    padding: 100px 0;
 }
-
-.modular-container .modular-title {
-    color: #152844;
-    text-align: center;
-    font-weight: normal;
-    font-size: 46px;
-    padding: 0 10%;
-}
-
-.modular-container .modular-introduction {
-    padding: 24px 20% 110px;
-    font-size: 18px;
-    color: #849EB0;
-    text-align: center;
-}
-
-.modular-container .modular-preview {
-    width: 100%;
-    padding: 0 10% 180px;
-}
-
-.modular-preview .preview-left {
-    float: left;
-    width: 250px;
-    letter-spacing: 12px;
-}
-
-.modular-preview .preview-left-title {
-    color: #2F5F7B;
-    font-size: 24px;
-    text-align: center;
-    padding-bottom: 35px;
-    letter-spacing: 0;
-}
-
-.modular-preview .preview-left-btn>li {
+.os-container ul > li {
     display: inline-block;
-    width: 115px;
-    height: 115px;
-    cursor: pointer;
-    margin-bottom: 20px;
+    width: 49%;
+}
+.img-cont {
+    text-align: center;
+}
+.text-cont {
+    padding-left: 14%;
+}
+.text-cont h2 {
+    padding-bottom: 30px;
+}
+.photos-wrip {
+    color: #fff;
+    background-image: url(../img/os_bgphotos.png);
+    background-repeat: no-repeat;
+}
+.version-wrip {
+    padding: 0;
+    width: 100%;
+    height: 666px;
+    background-image: url(../img/os_v7.png);
+    background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
-.modular-preview .preview-left-btn>li:nth-child(1) {
-    background-image: url(../img/reva_tracker.png);
+.data-wrip {
+    height: 400px;
+    background: linear-gradient(#FF9F2B, #FFAD2C);
+    filter: progid: DXImageTransform.Microsoft.Gradient(startColorStr=#FF9F2B, endColorStr=#FFAD2C);
 }
-
-.modular-preview .preview-left-btn>li:nth-child(2) {
-    background-image: url(../img/reva_ad.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(3) {
-    background-image: url(../img/reva_push.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(4) {
-    background-image: url(../img/reva_update.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(1).active {
-    background-image: url(../img/reva_trackerActive.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(2).active {
-    background-image: url(../img/reva_adActive.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(3).active {
-    background-image: url(../img/reva_pushActive.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(4).active {
-    background-image: url(../img/reva_updateActive.png);
-}
-
-.modular-preview .preview-right {
-    float: left;
-    padding-left: 10%;
-    width: calc(100% - 300px);
-}
-.modular-data {
-    width: 90%;
-    margin: 0 auto;
-    padding: 100px 0;
-    font-size: 0;
-}
-.modular-data > li {
-    display: inline-block;
-    width: 20%;
-    text-align: center;
-    vertical-align: top;
-}
-@media screen and (max-width: 1250px) {
-    .modular-data > li:nth-child(2),
-    .modular-data > li:nth-child(5) {
-        width: 26%;
-    }
-    .modular-data > li:nth-child(1),
-    .modular-data > li:nth-child(4) {
-        width: 14%;
-    }
-}
-.modular-data > li > p {
-    font-size: 50px;
-    padding-bottom: 20px;
-    color: #152844;
-}
-.modular-data > li > label {
-    font-size: 20px;
-    color: #B8BEC6;
-}
-
-.preview-right .swiper-container {
-    width: 100%;
-    max-width: 780px;
-    height: 650px;
-    box-shadow: 0 12px 42px 12px rgba(0, 0, 0, 0.08);
-}
-
-.preview-right img {
-    width: 100%;
-    height: 100%;
-}
-
-.app-container {
-    width: 100%;
-    padding-top: 180px;
-    text-align: center;
-    color: #fff;
-    background: linear-gradient(#2B406D, #4E5F84);
-    filter: progid: DXImageTransform.Microsoft.Gradient(startColorStr=#2B406D, endColorStr=#4E5F84);
-}
-
-.app-container .app-title {
-    font-weight: normal;
-    font-size: 48px;
-}
-
-.app-container .app-subtitle {
-    font-weight: normal;
-    padding: 30px 0;
-}
-
-.app-container .app-content {
-    opacity: .52;
-    line-height: 22px;
-}
-
-.app-container .app-icon {
-    padding: 100px 0;
-}
-
-.app-container .app-icon>li {
-    display: inline-block;
-    padding-right: 50px;
-    cursor: pointer;
-}
-
-.app-icon>li>img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 16px;
-    transition: all .2s linear;
-}
-
-.app-icon>li>span {
-    letter-spacing: 1.75px;
-    color: #D5DCE8;
-    transition: all .2s linear;
-}
-
-.app-icon>li:hover>img {
-    width: 62px;
-    height: 62px;
-    margin-bottom: 16px;
-}
-
-.app-icon>li:hover>span {
-    font-size: 15px;
-    letter-spacing: 1.75px;
-    color: #D5DCE8;
-}
-
-.app-icon>li>span img {
-    display: none;
-    padding-right: 5px;
-}
-
-.app-icon>li.active>img {
-    width: 62px;
-    height: 62px;
-    color: #00B9F7;
-}
-
-.app-icon>li.active>span {
-    font-size: 15px;
-    color: #00B9F7;
-}
-
-.app-icon>li.active>span img {
-    display: inline-block;
-}
-.app-preview {
-	width: 900px;
-	height: 550px;
-	margin: 0 auto;
-}
-.app-preview .swiper-container {
-	height: 100%;
-}
-.app-preview img {
-	width: 280px;
-	height: 100%;
-}
-.app-preview video {
-    display: none;
-    width: 280px;
-    height: 450px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -140px;
-    margin-top: -230px;
-}
-.app-preview .app-video-btn {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -25px;
-    margin-top: -25px;
-    cursor: pointer;
-}
-.app-cover {
-    position: relative;
-    top: -115px;
-    width: 100%;
-    height: 115px;
-    background: #fff;
-    z-index: 2;
-}
-.footer {
-    margin: 0px auto 100px;
-}
-// .detail-container{
-// 	width: 100%;
-// 	padding: 172px 5% 0 10%;
-// }
-// .detail-container .detail-left-wrip {
-// 	display: inline-block;
-// 	vertical-align: top;
-// 	width: 38%;
-// }
-// .detail-left-wrip>h2 {
-// 	color: #64779D;
-// 	padding-bottom: 24px;
-// }
-// .detail-container .detail-right-wrip {
-// 	display: inline-block;
-// 	vertical-align: top;
-// 	margin-top: -80px;
-// 	width: 60%;
-// 	height: 430px;
-// 	background-image: url(../img/bg_world_color.png);
-// 	background-size: 100% 100%;
-// }
-// .detail-right-wrip>img {
-//     position: relative;
-//     left: 30%;
-//     top: 100px;
-// }
