@@ -80,6 +80,7 @@ export default {
   name: 'revanow',
   data () {
     return {
+      scrollWatch: true,
       reva: '',
       app: '',
       numData: [{
@@ -136,34 +137,36 @@ export default {
     }
   },
   mounted () {
-    var that = this;
-    $(window).on('scroll', () => {
-      let widowHeight = $(window).height();
-      let scroll_top = $(document).scrollTop();
-      let data_top = $('.data-content').find("li").first().find('label').offset().top - widowHeight;
-      if (scroll_top >= data_top) {
-        var auto = setInterval(() => {
-          if (that.numData[0].num < 30) {
-            for (let i = 0; i < that.numData.length; i++) {
-              let item = that.numData[i];
-              item.num ++ ;
-            }
-          } else {
-            that.numData[0].num = '50+';
-            that.numData[1].num = '10 Billion';
-            that.numData[2].num = '1100+';
-            that.numData[3].num = '30+';
-            that.numData[4].num = '20 Million';
-            clearInterval(auto);
-          }
-        }, 50)
-      }
-    });
-    that.ready();
+    this.ready();
   },
   methods: {
     ready() {
       var that = this;
+      $(window).scrollTop(0);
+      $(window).on('scroll', () => {
+        if (that.scrollWatch) {
+          let widowHeight = $(window).height();
+          let scroll_top = $(document).scrollTop();
+          let data_top = $('.data-content').find("li").first().find('label').offset().top - widowHeight;
+          if (scroll_top >= data_top) {
+            var auto = setInterval(() => {
+              if (that.numData[0].num < 30) {
+                for (let i = 0; i < that.numData.length; i++) {
+                  let item = that.numData[i];
+                  item.num ++ ;
+                }
+              } else {
+                that.numData[0].num = '50+';
+                that.numData[1].num = '10 Billion';
+                that.numData[2].num = '1100+';
+                that.numData[3].num = '30+';
+                that.numData[4].num = '20 Million';
+                clearInterval(auto);
+              }
+            }, 50)
+          }
+        }
+      });
       const revaSwiper = new Swiper('.preview-right .swiper-container', {
           effect : 'coverflow',
           slidesPerView: 1.2,
@@ -227,6 +230,9 @@ export default {
         this.appActive = num;
       }
     }
+  },
+  destroyed () {
+    this.scrollWatch = false;
   }
 }
 </script>

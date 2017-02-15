@@ -101,35 +101,38 @@ export default {
   name: 'home',
   data () {
     return {
+      scrollWatch: true,
       total: 0,
       brands: 0,
       models: 0
     }
   },
   mounted() {
+    $(window).scrollTop(0);
     $(window).on('scroll', () => {
-      let widowHeight = $(window).height();
-      let scroll_top = $(document).scrollTop();
-      let data_top = $('#data_top').offset().top - widowHeight;
-      if (scroll_top >= data_top) {
-        // $(window).off('scroll');
-        var auto = setInterval(() => {
-          if (this.brands < 30) {
-            ++this.total;
-            ++this.brands;
-            ++this.models;
-          } else {
-            this.total = '40,000,000';
-            this.brands = '30+';
-            this.models = '200+';
-            clearInterval(auto);
-          }
-        }, 50)
+      if (this.scrollWatch) {
+        let widowHeight = $(window).height();
+        let scroll_top = $(document).scrollTop();
+        let data_top = $('#data_top').offset().top - widowHeight;
+        if (scroll_top >= data_top) {
+          var auto = setInterval(() => {
+            if (this.brands < 30) {
+              ++this.total;
+              ++this.brands;
+              ++this.models;
+            } else {
+              this.total = '40,000,000';
+              this.brands = '30+';
+              this.models = '200+';
+              clearInterval(auto);
+            }
+          }, 50)
+        }
       }
     });
   },
-  beforeDestory() {
-      $(window).off('scroll');
+  destroyed () {
+    this.scrollWatch = false;
   }
 }
 </script>
