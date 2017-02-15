@@ -107,25 +107,26 @@ export default {
     }
   },
   mounted() {
-      $(window).on('scroll', () => {
-        let widowHeight = $(window).height();
-        let scroll_top = $(document).scrollTop();
-        let data_top = $('#data_top').offset().top - widowHeight;
-        if (scroll_top >= data_top) {
-          $(window).off('scroll');
-          var auto = setInterval(() => {
+    $(window).on('scroll', () => {
+      let widowHeight = $(window).height();
+      let scroll_top = $(document).scrollTop();
+      let data_top = $('#data_top').offset().top - widowHeight;
+      if (scroll_top >= data_top) {
+        // $(window).off('scroll');
+        var auto = setInterval(() => {
+          if (this.brands < 30) {
             ++this.total;
             ++this.brands;
             ++this.models;
-            if (this.brands >= 30) {
-              this.total = '40,000,000';
-              this.brands = '30+';
-              this.models = '200+';
-              clearInterval(auto);
-            }
-          }, 50)
-        }
-      });
+          } else {
+            this.total = '40,000,000';
+            this.brands = '30+';
+            this.models = '200+';
+            clearInterval(auto);
+          }
+        }, 50)
+      }
+    });
   },
   beforeDestory() {
       $(window).off('scroll');
