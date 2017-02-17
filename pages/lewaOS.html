@@ -135,28 +135,32 @@
         <i class="fa fa-arrow-up"></i>
     </div>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/swiper-3.4.1.jquery.min.js"></script>
     <script src="../js/main.js"></script>
     <script>
-        $(window).scroll(function() {
+        var isScroll = true;
+        $(window).on("scroll", function() {
             var widowHeight = $(window).height();
             var scroll_top = $(document).scrollTop();
             var data_top = $('#data_top').offset().top - widowHeight;
-            if (scroll_top >= data_top) {
-                var $all = $('.data-wrip p')
-                    $version = $('.data-version'),
-                    $brand = $('.data-brand'),
-                    $model = $('.data-model');
-                var all = parseInt($version.html());
-                if(all < 30){
-                   $all.html(++all);
-                   setTimeout(arguments.callee,50);
-                } else {
-                    $version.html('180');
-                    $brand.html('36');
-                    $model.html('176');
+            if (isScroll) {
+                if (scroll_top >= data_top) {
+                    isScroll = false;
+                    var auto = setInterval(function() {
+                        var $all = $('.data-wrip p')
+                            $version = $('.data-version'),
+                            $brand = $('.data-brand'),
+                            $model = $('.data-model');
+                        var all = parseInt($version.html());
+                        if(all < 30){
+                           $all.html(++all);
+                        } else {
+                            $version.html('180');
+                            $brand.html('36');
+                            $model.html('176');
+                            clearInterval(auto);
+                        }
+                    }, 50)
                 }
-                
             }
         });
     </script>

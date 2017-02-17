@@ -76,7 +76,7 @@
             <ul class="data-content">
                 <li>
                     <p class="data-content-ad">0</p>
-                    <label id="data_content_top">Ad Platforms</label>
+                    <label id="data_top">Ad Platforms</label>
                 </li>
                 <li>
                     <p class="data-content-monthly">0</p>
@@ -217,29 +217,35 @@
     <script src="../js/swiper-3.4.1.jquery.min.js"></script>
     <script src="../js/main.js"></script>
     <script>
+        var isScroll = true;
         $(window).scroll(function() {
             var widowHeight = $(window).height();
             var scroll_top = $(document).scrollTop();
-            var data_top = $('#data_content_top').offset().top - widowHeight;
-            if (scroll_top >= data_top) {
-                var $all = $('.data-content p')
-                    $ad = $('.data-content-ad'),
-                    $monthly = $('.data-content-monthly'),
-                    $campaign = $('.data-content-campaign');
-                    $countries = $('.data-content-countries');
-                    $unique = $('.data-content-unique');
-                var all = parseInt($ad.html());
-                if(all < 30){
-                   $all.html(++all);
-                   setTimeout(arguments.callee,50);
-                } else {
-                    $ad.html('50+');
-                    $monthly.html('10 Billion');
-                    $campaign.html('1100+');
-                    $countries.html('30+');
-                    $unique.html('20 Million');
+            var data_top = $('#data_top').offset().top - widowHeight;
+            if (isScroll) {
+                if (scroll_top >= data_top) {
+                    isScroll = false;
+                    var auto = setInterval(function() {
+                        var $all = $('.data-content p')
+                            $ad = $('.data-content-ad'),
+                            $monthly = $('.data-content-monthly'),
+                            $campaign = $('.data-content-campaign');
+                            $countries = $('.data-content-countries');
+                            $unique = $('.data-content-unique');
+                        var all = parseInt($ad.html());
+                        if(all < 30){
+                           $all.html(++all);
+                        } else {
+                            $ad.html('50+');
+                            $monthly.html('10 Billion');
+                            $campaign.html('1100+');
+                            $countries.html('30+');
+                            $unique.html('20 Million');
+                            clearInterval(auto);
+                        }
+                    }, 50)
+                    
                 }
-                
             }
         });
         var revaSwiper = new Swiper('.preview-right .swiper-container', {

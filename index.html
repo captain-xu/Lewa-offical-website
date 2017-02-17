@@ -169,28 +169,32 @@
         <i class="fa fa-arrow-up"></i>
     </div>
     <script src="js/jquery.min.js"></script>
-    <script src="js/swiper-3.4.1.jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
-        $(window).scroll(function() {
+        var isScroll = true;
+        $(window).on("scroll", function() {
             var widowHeight = $(window).height();
             var scroll_top = $(document).scrollTop();
             var data_top = $('#data_top').offset().top - widowHeight;
-            if (scroll_top >= data_top) {
-                var $all = $('.data-value p')
-                    $total = $('.data-val-total'),
-                    $brands = $('.data-val-brands'),
-                    $models = $('.data-val-models');
-                var all = parseInt($total.html());
-                if(all < 30){
-                   $all.html(++all);
-                   setTimeout(arguments.callee,50);
-                } else {
-                    $total.html('40,000,000');
-                    $brands.html('30+');
-                    $models.html('200+');
+            if (isScroll) {
+                if (scroll_top >= data_top) {
+                    isScroll = false;
+                    var auto = setInterval(function() {
+                        var $all = $('.data-value p')
+                            $total = $('.data-val-total'),
+                            $brands = $('.data-val-brands'),
+                            $models = $('.data-val-models');
+                        var all = parseInt($total.html());
+                        if(all < 30){
+                           $all.html(++all);
+                        } else {
+                            $total.html('40,000,000');
+                            $brands.html('30+');
+                            $models.html('200+');
+                            clearInterval(auto);
+                        }
+                    }, 50)
                 }
-                
             }
         });
         var videoDemo = $("#video")[0];
