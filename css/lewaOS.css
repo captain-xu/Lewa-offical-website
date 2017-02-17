@@ -1,10 +1,10 @@
 .top-container {
-    height: 620px;
-    background-image: url(../img/bg_os.png);
+    background-image: url(../img/bg_os.jpg);
 }
 .top-container .top-introduction {
     position: relative;
     padding-top: 0;
+    color: #fff;
 }
 
 .os-container > li {

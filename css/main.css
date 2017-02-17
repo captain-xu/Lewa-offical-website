@@ -53,6 +53,14 @@
     height: 100%;
     color: rgba(255, 255, 255, 0.7);
 }
+@font-face { 
+    font-family: OpenSans-Light;
+    src: url('../fonts/OpenSans-Light.ttf');
+} 
+@font-face { 
+    font-family: OpenSans-Bold;
+    src: url('../fonts/OpenSans-Bold.ttf');
+} 
 
 .top-container {
     position: relative;
@@ -62,7 +70,7 @@
     color: #fff;
     text-align: center;
     background-color: #0E356D;
-    background-size: 1800px 100%;
+    background-size: 100% auto;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -93,6 +101,7 @@
     margin: 0 auto;
     padding-top: 68px;
     text-align: left;
+    font-family: OpenSans-Light;
     font-size: 17px;
     font-weight: lighter;
     color: rgba(255, 255, 255, 0.77);
@@ -162,7 +171,6 @@
 
 .footer .copyright {
     padding-top: 15px;
-    height: 34px;
     line-height: 34px;
 }
 

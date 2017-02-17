@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>RevaNow – LeWa makes life happier!</title>
+    <title>REVA – LeWa makes life happier!</title>
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/swiper-3.4.1.min.css">
     <link rel="stylesheet" href="../css/reset.css">
@@ -17,9 +17,9 @@
         <img src="../img/logo_lewa.png" class="header-logo" width="135" height="60">
         <ul class="header-nav">
             <li><a href="../index.html">HOME</a></li>
-            <li class="active">RevaNow</li>
+            <li class="active">REVA</li>
             <li><a href="lewaOS.html">LEWA OS</a></li>
-            <li><a href="aboutUs.html">CONTACT US</a></li>
+            <li><a href="aboutUs.html">ABOUT US</a></li>
         </ul>
     </header>
     <div class="top-container">
@@ -28,6 +28,7 @@
         <div class="top-img-wrip">
             <div class="top-rms">
                 <a href="#RMS">
+                    <img src="../img/reva_rms.png">
                     <div class="top-img-shade">
                         <p>RMS</p>
                         <span>REVA Mobile Service</span>
@@ -35,6 +36,7 @@
                 </a>
             </div>
             <div class="top-rbs">
+                <img src="../img/reva_rbs.png">
                 <div class="top-img-shade">
                     <p>RBS</p>
                     <span>REVA Backend System</span>
@@ -120,10 +122,10 @@
                 <img src="../img/app_lockscreen.png"><br />
                 <span><img src="../img/icon_play.png">Lock Screen</span>
             </li>
-            <li onclick="slideApp(5)">
+            <!-- <li onclick="slideApp(5)">
                 <img src="../img/app_xender.png"><br />
                 <span><img src="../img/icon_play.png">Xender Play</span>
-            </li>
+            </li> -->
         </ul>
         <div class="app-preview">
             <div class="swiper-container">
@@ -159,16 +161,16 @@
                     <div class="swiper-slide">
                         <img src="../img/rms_lockscreen.png">
                     </div>
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <img src="../img/rms_xender.png">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
     <div class="app-cover"></div>
     <footer class="footer">
-        <ul class="footer-pub">
+        <!-- <ul class="footer-pub">
             <li> 
                 <h2>Contact Us</h2>
                 <a href="">Partner opportunities</a><br>
@@ -196,12 +198,12 @@
                     <i class="fa fa-paper-plane-o"></i>
                 </div>
             </li>
-        </ul>
+        </ul> -->
         <div class="copyright">
-            <a href="../index.html">Home | </a>
-            <a href="lewaOS.html">LeWa OS | </a>
-            <a href="revaNow.html">RevaNow | </a>
-            <a href="aboutUs.html">About LeWa &copy; 2011-2016 LeWa Co., Ltd</a>
+            <a href="../index.html">HOME | </a>
+            <a href="revaNow.html">REVA | </a>
+            <a href="lewaOS.html">LEWA OS | </a>
+            <a href="aboutUs.html">ABOUT US &copy; 2011-2016 LeWa Co., Ltd</a>
             <div class="society">
                 <a href="https://twitter.com/Lewa_OS" target="_blank"><i class="fa fa-twitter-square"></i></a>
                 <a href="https://www.facebook.com/LeWaOSofficial/" target="_blank"><i class="fa fa-facebook-square"></i></a>
@@ -256,7 +258,7 @@
                 stretch: 165,
                 depth: 90,
                 modifier: 2,
-                slideShadows : false
+                slideShadows : true
             },
             onSlideChangeStart: function(swiper){
                 slideRevaIndex(swiper.activeIndex);
@@ -277,7 +279,7 @@
             slideToClickedSlide:true,
             coverflow: {
                         rotate: -1,
-                        stretch: 66,
+                        stretch: 66.8,
                         depth: 80,
                         modifier: 3,
                         slideShadows : false
