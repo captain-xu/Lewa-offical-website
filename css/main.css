@@ -69,8 +69,8 @@
 
 .top-container .top-logo {
     position: relative;
-    width: 160px;
-    height: 40px;
+    width: 188px;
+    height: 50px;
     animation: logoslide 1.5s ease 0s 1;
     -webkit-animation: logoslide 1.5s ease 0s 1; /* Safari and Chrome */
 }
@@ -78,10 +78,10 @@
 .top-container .top-introduction {
     position: relative;
     font-size: 39px;
-    font-weight: normal;
+    font-weight: lighter;
+    color: #BEC8D8;
     margin: 0;
     padding-top: 90px;
-    padding-bottom: 60px;
     animation: logoslide 1.5s ease 0s 1;
     -webkit-animation: logoslide 1.5s ease 0s 1; /* Safari and Chrome */
 }
@@ -91,9 +91,11 @@
     width: 80%;
     line-height: 26px;
     margin: 0 auto;
-    font-size: 16px;
+    padding-top: 68px;
     text-align: left;
-    color: rgba(255, 255, 255, 0.82);
+    font-size: 17px;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.77);
     animation: logoslide 1.5s ease 0s 1;
     -webkit-animation: logoslide 1.5s ease 0s 1; /* Safari and Chrome */
 }

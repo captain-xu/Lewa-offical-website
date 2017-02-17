@@ -16,7 +16,7 @@
     width: 40%;
     max-width: 636px;
     height: 336px;
-    background-size: 100% 100%;
+    background-size: 636px 336px;
     transition: background-size 1s linear;
 }
 
@@ -30,7 +30,7 @@
 
 .top-img-wrip .top-rms:hover,
 .top-img-wrip .top-rbs:hover {
-    background-size: 105% 105%;
+    background-size: 666px 366px;
 }
 
 .top-img-shade {
@@ -191,9 +191,10 @@
 }
 
 .preview-right .swiper-container {
-    width: 100%;
-    max-width: 980px;
-    height: 650px;
+    width: 800px;
+    // max-width: 100%;
+    // min-width: 720px;
+    height: 520px;
     box-shadow: 0 12px 42px 12px rgba(0, 0, 0, 0.08);
 }
 
@@ -219,11 +220,13 @@
 .app-container .app-subtitle {
     font-weight: normal;
     padding: 30px 0;
+    font-size: 29px;
 }
 
 .app-container .app-content {
     opacity: .52;
     line-height: 22px;
+    font-size: 16px;
 }
 
 .app-container .app-icon {

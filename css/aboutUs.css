@@ -4,10 +4,15 @@
 .top-container .top-introduction {
     position: relative;
     padding-top: 0;
+    padding-bottom: 42px;
+    font-size: 56px;
+    font-weight: lighter;
+    color: #FFFFFF;
+    letter-spacing: 2px;
 }
-.top-content {
-    padding-bottom: 20px;
+.top-container .top-content {
     letter-spacing: 0.56px;
+    padding-top: 38px;
 }
 .top-img-wrip {
     width: 80%;
@@ -57,7 +62,7 @@
     text-align: center;
     background-image: url(../img/history_ver.png);
     background-repeat: no-repeat;
-    background-size: 6px 100%;
+    background-size: 4px 100%;
     background-position: center 0;
     cursor: pointer;
 }
@@ -78,7 +83,7 @@
     margin-left: -10%;
 }
 .his-content {
-    font-size: 16px;
+    font-size: 15px;
     color: #515151;
     line-height: 26px;
 }
@@ -91,7 +96,8 @@
     width: 25px;
     height: 25px;
     background: #fff;
-    border: 6px solid #eee;
+    border: 5px solid #eee;
+    box-shadow: 0 0 0 3px #fff;
     border-radius: 25px;
     transition: border-color 1s;
 }
