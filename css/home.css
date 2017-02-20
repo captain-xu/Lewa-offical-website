@@ -108,8 +108,9 @@
     margin-bottom: 20px;
 }
 .data-board {
+	position: relative;
     background: linear-gradient(#3E65BC, #1FA0EA);
-    filter: progid: DXImageTransform.Microsoft.Gradient(startColorStr=#3E65BC, endColorStr=#1FA0EA);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#3E65BC, endColorStr=#1FA0EA);
     padding: 80px 0;
     text-align: center;
 }

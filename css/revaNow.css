@@ -199,7 +199,7 @@
     text-align: center;
     color: #fff;
     background: linear-gradient(#0E356D, #4D6EB8);
-    filter: progid: DXImageTransform.Microsoft.Gradient(startColorStr=#0E356D, endColorStr=#4D6EB8);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#0E356D, endColorStr=#4D6EB8);
 }
 
 .app-container .app-title {
