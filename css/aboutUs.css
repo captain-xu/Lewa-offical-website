@@ -149,6 +149,20 @@
     width: 100%;
     height: 100%;
 }
+.join-us {
+    background: #00B430;
+    color: #fff;
+    padding: 150px 100px;
+}
+.join-us h2 {
+    font-family: OpenSans-Bold;
+    padding-bottom: 16px;
+}
+.join-us p {
+    font-family: OpenSans-Light;
+    font-size: 18px;
+    padding-bottom: 70px;
+}
 .contact-us {
     background: #00B430;
     color: #fff;
@@ -161,6 +175,7 @@
     padding-bottom: 16px;
 }
 .contact-us p {
+    font-family: OpenSans-Light;
     font-size: 18px;
     padding-bottom: 70px;
     letter-spacing: 1.5px;

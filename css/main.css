@@ -193,6 +193,14 @@
     color: #3B5998;
 }
 
+.copyright .society .fa-google-plus-square {
+    color: #D64836;
+}
+
+.copyright .society .fa-linkedin-square {
+    color: #0194C0;
+}
+
 #to-top {
 	display: none;
     position: fixed;
