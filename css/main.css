@@ -74,6 +74,11 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+@media screen and (max-width: 1580px ) {
+    .top-container {
+        background-size: auto 100%;
+    }
+}
 
 .top-container .top-logo {
     position: relative;
