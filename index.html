@@ -172,7 +172,8 @@
     <script src="js/main.js"></script>
     <script type="text/javascript">
         var isScroll = true;
-        $(window).on("scroll", function() {
+        $(window).on("scroll", debounce(homeScroll));
+        function homeScroll() {
             var widowHeight = $(window).height();
             var scroll_top = $(document).scrollTop();
             var data_top = $('#data_top').offset().top - widowHeight;
@@ -196,7 +197,7 @@
                     }, 50)
                 }
             }
-        });
+        };
         var videoDemo = $("#video")[0];
         $(".top-demo img").on('click', function(event) {
             event.preventDefault();

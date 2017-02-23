@@ -140,7 +140,8 @@
     <script src="../js/main.js"></script>
     <script>
         var isScroll = true;
-        $(window).on("scroll", function() {
+        $(window).on("scroll", debounce(osScroll));
+        function osScroll() {
             var widowHeight = $(window).height();
             var scroll_top = $(document).scrollTop();
             var data_top = $('#data_top').offset().top - widowHeight;
@@ -164,7 +165,7 @@
                     }, 50)
                 }
             }
-        });
+        };
     </script>
 </body>
 </body>

@@ -220,7 +220,8 @@
     <script src="../js/main.js"></script>
     <script>
         var isScroll = true;
-        $(window).scroll(function() {
+        $(window).on("scroll", debounce(revaScroll));
+        function revaScroll() {
             var widowHeight = $(window).height();
             var scroll_top = $(document).scrollTop();
             var data_top = $('#data_top').offset().top - widowHeight;
@@ -249,7 +250,7 @@
                     
                 }
             }
-        });
+        };
         var revaSwiper = new Swiper('.preview-right .swiper-container', {
             effect : 'coverflow',
             slidesPerView: 1.5,
