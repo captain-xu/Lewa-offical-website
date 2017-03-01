@@ -5,8 +5,11 @@
 .top-more {
 	position: relative;
 	padding-top: 160px;
+    -webkit-animation: logoslide 1.5s ease 0s 1;
+    -moz-animation: logoslide 1.5s ease 0s 1;
+    -ms-animation: logoslide 1.5s ease 0s 1;
+    -o-animation: logoslide 1.5s ease 0s 1;
     animation: logoslide 1.5s ease 0s 1;
-    -webkit-animation: logoslide 1.5s ease 0s 1; /* Safari and Chrome */
 }
 .top-more > a {
 	position: relative;
@@ -18,8 +21,11 @@
 	border: 1px solid #fff;
 	border-radius: 2px;
     letter-spacing: 2px;
+    -webkit-animation: logoslide 1.5s ease 0s 1;
+    -moz-animation: logoslide 1.5s ease 0s 1;
+    -ms-animation: logoslide 1.5s ease 0s 1;
+    -o-animation: logoslide 1.5s ease 0s 1;
     animation: logoslide 1.5s ease 0s 1;
-    -webkit-animation: logoslide 1.5s ease 0s 1; /* Safari and Chrome */
 }
 
 .customer-container {

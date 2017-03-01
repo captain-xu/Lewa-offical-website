@@ -8,6 +8,10 @@
     background: transparent;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     z-index: 10;
+    -webkit-transition: height 0.5s, padding 0.5s, background 0.5s;
+    -moz-transition: height 0.5s, padding 0.5s, background 0.5s;
+    -ms-transition: height 0.5s, padding 0.5s, background 0.5s;
+    -o-transition: height 0.5s, padding 0.5s, background 0.5s;
     transition: height 0.5s, padding 0.5s, background 0.5s;
 }
 .header.active {
@@ -38,6 +42,10 @@
     font-size: 13px;
     text-align: center;
     cursor: pointer;
+    -webkit-transition: background .5s linear;
+    -moz-transition: background .5s linear;
+    -ms-transition: background .5s linear;
+    -o-transition: background .5s linear;
     transition: background .5s linear;
 }
 
@@ -84,8 +92,11 @@
     position: relative;
     width: 188px;
     height: 50px;
+    -webkit-animation: logoslide 1.5s ease 0s 1;
+    -moz-animation: logoslide 1.5s ease 0s 1;
+    -ms-animation: logoslide 1.5s ease 0s 1;
+    -o-animation: logoslide 1.5s ease 0s 1;
     animation: logoslide 1.5s ease 0s 1;
-    -webkit-animation: logoslide 1.5s ease 0s 1; /* Safari and Chrome */
 }
 
 .top-container .top-introduction {
@@ -95,8 +106,11 @@
     color: #BEC8D8;
     margin: 0;
     padding-top: 90px;
+    -webkit-animation: logoslide 1.5s ease 0s 1;
+    -moz-animation: logoslide 1.5s ease 0s 1;
+    -ms-animation: logoslide 1.5s ease 0s 1;
+    -o-animation: logoslide 1.5s ease 0s 1;
     animation: logoslide 1.5s ease 0s 1;
-    -webkit-animation: logoslide 1.5s ease 0s 1; /* Safari and Chrome */
 }
 
 .top-container .top-content {
@@ -110,8 +124,11 @@
     font-size: 17px;
     font-weight: lighter;
     color: rgba(255, 255, 255, 0.77);
+    -webkit-animation: logoslide 1.5s ease 0s 1;
+    -moz-animation: logoslide 1.5s ease 0s 1;
+    -ms-animation: logoslide 1.5s ease 0s 1;
+    -o-animation: logoslide 1.5s ease 0s 1;
     animation: logoslide 1.5s ease 0s 1;
-    -webkit-animation: logoslide 1.5s ease 0s 1; /* Safari and Chrome */
 }
 @keyframes logoslide
 {

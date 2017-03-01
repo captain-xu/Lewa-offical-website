@@ -90,6 +90,10 @@
 }
 .his-year {
     color: #D5D5D5;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
     transition: color 1s;
 }
 .his-circle {
@@ -100,6 +104,10 @@
     border: 5px solid #eee;
     box-shadow: 0 0 0 3px #fff;
     border-radius: 25px;
+    -webkit-transition: border-color 1s;
+    -moz-transition: border-color 1s;
+    -ms-transition: border-color 1s;
+    -o-transition: border-color 1s;
     transition: border-color 1s;
 }
 .history-item:hover .his-circle {
