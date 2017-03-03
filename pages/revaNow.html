@@ -24,6 +24,13 @@
         </ul>
     </header>
     <div class="top-container">
+        <div class="wrapper pos-relative" id="first-part-wrapper">
+            <div class="content pos-relative align-center p-t-140 p-b-140" id="top">
+                <div class="hideMe particles pos-absolute t-1p l-1p width-98 height-98 in" data-dur=".5" id="particles-top" style="transition-duration: 0.5s;">
+                    <canvas class="particles-js-canvas-el" width="1254" height="768" style="width: 100%; height: 100%;"></canvas>
+                </div>
+            </div>
+        </div>
         <img src="../img/logo_reva.png" class="top-logo">
         <h1 class="top-introduction">An operating platform based on Android OS</h1>
         <div class="top-img-wrip">
@@ -217,11 +224,20 @@
         <i class="fa fa-arrow-up"></i>
     </div>
     <script src="../js/jquery.min.js"></script>
+    <script src="../js/particles.min.js"></script>
     <script src="../js/swiper-3.4.1.jquery.min.js"></script>
     <script src="../js/main.js"></script>
     <script>
+        $(document).ready(function() {
+            initParticles();
+            $(window).on("scroll", debounce(homeScroll));
+            $(".app-video-btn").on('click', function(event) {
+                event.preventDefault();
+                $(this).next().show();
+                $(this).next()[0].play();
+            });
+        });
         var isScroll = true;
-        $(window).on("scroll", debounce(revaScroll));
         function revaScroll() {
             var widowHeight = $(window).height();
             var scroll_top = $(document).scrollTop();
@@ -305,12 +321,123 @@
                 videoPlay[i].currentTime = 0;
             }
         };
+        var particlesSettings = {
+            particles: {
+                number: {
+                    value: 30,
+                    density: {
+                        enable: !0,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#fff",
+                    opacity:.8,
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    },
+                    image: {
+                        src: "img/github.svg",
+                        width: 100,
+                        height: 100
+                    }
+                },
+                opacity: {
+                    value: .8,
+                    random: !1,
+                    anim: {
+                        enable: !1,
+                        speed: .5,
+                        opacity_min: .1,
+                        sync: !1
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: !0,
+                    anim: {
+                        enable: !1,
+                        speed: 10,
+                        size_min: .1,
+                        sync: !1
+                    }
+                },
+                line_linked: {
+                    enable: !0,
+                    distance: 150,
+                    color: "#fff",
+                    opacity: .3,
+                    width: 1
+                },
+                move: {
+                    enable: !0,
+                    speed: 1,
+                    direction: "none",
+                    random: !1,
+                    straight: !1,
+                    out_mode: "out",
+                    bounce: !1,
+                    attract: {
+                        enable: !1,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: 0,
+                        mode: "grab"
+                    },
+                    onclick: {
+                        enable: 0,
+                        mode: "push"
+                    },
+                    resize: !0
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 1.5
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: .4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: !0
+        };
 
-        $(".app-video-btn").on('click', function(event) {
-            event.preventDefault();
-            $(this).next().show();
-            $(this).next()[0].play();
-        });
+        function initParticles() {
+            $('.particles').each(function (i, particle) {
+                particlesJS($(particle).attr('id'), particlesSettings);
+            });
+        }
     </script>
 </body>
 </body>
