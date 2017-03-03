@@ -1,6 +1,74 @@
 
 .top-container{
 	background-image: url(../img/bg_home.jpg);
+	text-align: left;
+	padding-left: 6%;
+	overflow: hidden;
+}
+.top-container .top-shade {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+.top-left {
+	position: relative;
+	z-index: 3;
+}
+.top-left .top-content {
+	width: 40%;
+	margin: 0;
+}
+.top-container .top-history {
+	position: absolute;
+    right: -200px;
+    top: -150px;
+    width: 900px;
+    font-size: 0;
+    transform: rotate(-12deg);
+     -webkit-animation: logoright 30s infinite linear;
+    -moz-animation: logoright 30s infinite linear;
+    -ms-animation: logoright 30s infinite linear;
+    -o-animation: logoright 30s infinite linear;
+    animation: logoright 30s infinite linear; 
+}
+.top-history li:nth-child(2), 
+.top-history li:nth-child(5), 
+.top-history li:nth-child(8), 
+.top-history li:nth-child(11), 
+.top-history li:nth-child(14) {
+	position: relative;
+	top: -150px;
+}
+.top-history li:nth-child(3), 
+.top-history li:nth-child(6), 
+.top-history li:nth-child(9), 
+.top-history li:nth-child(12), 
+.top-history li:nth-child(15) {
+	position: relative;
+	top: -300px;
+}
+.top-history li {
+	display: inline-block;
+	position: relative;
+	width: 30%;
+	margin-bottom: 10px;
+	margin-right: 20px;
+}
+@keyframes logoright
+{
+    0% {top: -150px}
+    50% {top: -1000px}
+    100% {top: -150px}
+}
+
+@-webkit-keyframes logoright /* Safari and Chrome */
+{
+    0% {top: -150px}
+    50% {top: -1000px}
+    100% {top: -150px}
 }
 .top-more {
 	position: relative;
@@ -17,10 +85,13 @@
 	width: 188px;
 	height: 40px;
 	line-height: 40px;
-	color: #fff;
-	border: 1px solid #fff;
-	border-radius: 2px;
-    letter-spacing: 2px;
+	color: #212E35;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0 4px 7px 0 rgba(100,100,100,0.50);
+	text-align: center;
+	font-weight: bold;
+    letter-spacing: 0.8px;
     -webkit-animation: logoslide 1.5s ease 0s 1;
     -moz-animation: logoslide 1.5s ease 0s 1;
     -ms-animation: logoslide 1.5s ease 0s 1;
