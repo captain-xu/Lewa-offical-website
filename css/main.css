@@ -25,7 +25,13 @@
 .header .header-logo {
     vertical-align: top;
 }
-
+.header .fa-bars {
+    display: none;
+    color: #fff;
+    float: right;
+    font-size: 24px;
+    line-height: 60px;
+}
 .header .header-nav {
     color: #fff;
     height: 60px;
@@ -61,15 +67,38 @@
     height: 100%;
     color: rgba(255, 255, 255, 0.7);
 }
-@font-face { 
-    font-family: OpenSans-Light;
-    src: url('../fonts/OpenSans-Light.ttf');
-} 
-@font-face { 
-    font-family: OpenSans-Bold;
-    src: url('../fonts/OpenSans-Bold.ttf');
-} 
-
+@media screen and (max-width: 790px) {
+    .header .fa-bars {
+        display: block;
+        cursor: pointer;
+    }
+    .header .header-nav {
+        visibility:hidden;
+        opacity: 0;
+        height: auto;
+        margin-top: 50px;
+        margin-right: -70px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        -webkit-transition: opacity 0.2s linear;
+        -moz-transition: opacity 0.2s linear;
+        -ms-transition: opacity 0.2s linear;
+        -o-transition: opacity 0.2s linear;
+        transition: opacity 0.2s linear;
+    }
+    .header .header-nav.active {
+        visibility:visible;
+        opacity: 1;
+    }
+    .header .header-nav > li {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .header .header-nav > li:last-child {
+        margin: 0;
+    }
+}
 .top-container {
     position: relative;
     width: 100%;
@@ -238,3 +267,11 @@
     color: #fff;
     z-index: 3;
 }
+@font-face { 
+    font-family: OpenSans-Light;
+    src: url('../fonts/OpenSans-Light.ttf');
+} 
+@font-face { 
+    font-family: OpenSans-Bold;
+    src: url('../fonts/OpenSans-Bold.ttf');
+} 

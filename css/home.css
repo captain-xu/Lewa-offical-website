@@ -2,7 +2,7 @@
 .top-container{
 	background-image: url(../img/bg_home.jpg);
 	text-align: left;
-	padding-left: 6%;
+	padding-left: 10%;
 	overflow: hidden;
 }
 .top-container .top-shade {
@@ -28,27 +28,6 @@
     width: 900px;
     font-size: 0;
     transform: rotate(-12deg);
-     -webkit-animation: logoright 30s infinite linear;
-    -moz-animation: logoright 30s infinite linear;
-    -ms-animation: logoright 30s infinite linear;
-    -o-animation: logoright 30s infinite linear;
-    animation: logoright 30s infinite linear; 
-}
-.top-history li:nth-child(2), 
-.top-history li:nth-child(5), 
-.top-history li:nth-child(8), 
-.top-history li:nth-child(11), 
-.top-history li:nth-child(14) {
-	position: relative;
-	top: -150px;
-}
-.top-history li:nth-child(3), 
-.top-history li:nth-child(6), 
-.top-history li:nth-child(9), 
-.top-history li:nth-child(12), 
-.top-history li:nth-child(15) {
-	position: relative;
-	top: -300px;
 }
 .top-history li {
 	display: inline-block;
@@ -57,18 +36,77 @@
 	margin-bottom: 10px;
 	margin-right: 20px;
 }
-@keyframes logoright
+.top-history li:nth-child(1), 
+.top-history li:nth-child(4), 
+.top-history li:nth-child(7), 
+.top-history li:nth-child(10), 
+.top-history li:nth-child(13) {
+    -webkit-animation: hisfirst 30s linear;
+    -moz-animation: hisfirst 30s linear;
+    -ms-animation: hisfirst 30s linear;
+    -o-animation: hisfirst 30s linear;
+    animation: hisfirst 30s linear; 
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.top-history li:nth-child(2), 
+.top-history li:nth-child(5), 
+.top-history li:nth-child(8), 
+.top-history li:nth-child(11), 
+.top-history li:nth-child(14) {
+    -webkit-animation: hissecond 30s linear;
+    -moz-animation: hissecond 30s linear;
+    -ms-animation: hissecond 30s linear;
+    -o-animation: hissecond 30s linear;
+    animation: hissecond 30s linear; 
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.top-history li:nth-child(3), 
+.top-history li:nth-child(6), 
+.top-history li:nth-child(9), 
+.top-history li:nth-child(12), 
+.top-history li:nth-child(15) {
+    -webkit-animation: histhird 30s linear;
+    -moz-animation: histhird 30s linear;
+    -ms-animation: histhird 30s linear;
+    -o-animation: histhird 30s linear;
+    animation: histhird 30s linear; 
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes hisfirst
 {
-    0% {top: -150px}
-    50% {top: -1000px}
-    100% {top: -150px}
+    from {top: 0px}
+    to {top: -600px}
 }
 
-@-webkit-keyframes logoright /* Safari and Chrome */
+@-webkit-keyframes hisfirst 
 {
-    0% {top: -150px}
-    50% {top: -1000px}
-    100% {top: -150px}
+    from {top: 0px}
+    to {top: -600px}
+}
+@keyframes hissecond
+{
+    from {top: -150px}
+    to {top: -1000px}
+}
+
+@-webkit-keyframes hissecond 
+{
+    from {top: -150px}
+    to {top: -1000px}
+}
+@keyframes histhird
+{
+    from {top: -300px}
+    to {top: -1300px}
+}
+
+@-webkit-keyframes histhird 
+{
+    from {top: -300px}
+    to {top: -1300px}
 }
 .top-more {
 	position: relative;
@@ -88,15 +126,19 @@
 	color: #212E35;
 	background: #fff;
 	border-radius: 4px;
-	box-shadow: 0 4px 7px 0 rgba(100,100,100,0.50);
 	text-align: center;
 	font-weight: bold;
     letter-spacing: 0.8px;
+    transition: all 0.2s ease;
     -webkit-animation: logoslide 1.5s ease 0s 1;
     -moz-animation: logoslide 1.5s ease 0s 1;
     -ms-animation: logoslide 1.5s ease 0s 1;
     -o-animation: logoslide 1.5s ease 0s 1;
     animation: logoslide 1.5s ease 0s 1;
+}
+.top-more > a:hover {
+	box-shadow: 0 4px 7px 0 rgba(100,100,100,0.6);
+    transform: translateY(-1px);
 }
 
 .customer-container {
@@ -253,4 +295,40 @@
 .data-board button:active {
 	border-color: rgba(255, 255, 255, 0.8);
 	color: rgba(255, 255, 255, 0.8);
+}
+.wrapper .content {
+    width: 100%;
+    margin: 0 auto;
+}.p-b-140 {
+    padding-bottom: 140px;
+}.p-t-140 {
+    padding-top: 140px;
+}.pos-relative {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}.align-center {
+    text-align: center;
+}.hideMe.in {
+    opacity: 1;
+    height: 100%;
+}.hideMe {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    opacity: 0;
+}.l-1p {
+    left: 1%;
+}.t-1p {
+    top: 1%;
+}.height-98 {
+    height: 98%;
+}.width-98 {
+    width: 98%;
+}.pos-absolute {
+    position: absolute;
 }
