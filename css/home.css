@@ -188,15 +188,19 @@
 	display: inline-block;
 	width: calc(50% - 26px);
 	max-width: 480px;
-	min-height: 250px;
+	min-height: 275px;
 	margin-bottom: 26px;
-	padding: 15px 32px 24px;
+	padding: 0px 32px 24px;
 	font-size: 14px;
 	box-shadow: 0 12px 42px 12px rgba(0,0,0,0.08);
 	vertical-align: top;
 }
 .customer-achieve h4 {
-	padding-bottom: 12px;
+	height: 34px;
+	line-height: 45px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	border-left: 5px solid #F05537;
 	text-align: left;
 	color: #898989;
 }
@@ -204,6 +208,9 @@
 .customer-achieve li:nth-child(3) {
 	margin-right: 26px;
 }
+.customer-achieve li:nth-child(4) {
+	margin-top: -100px;
+}   
 .customer-achieve .stars {
 	padding-bottom: 30px;
 	color: #F6A623;
@@ -211,20 +218,46 @@
 }
 .customer-achieve .contents {
 	text-align: left;
-	line-height: 24px;
+	padding-bottom: 20px;
+	clear: both;
+}
+.customer-achieve .team-logo {
+	display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background: #01AA01;
+    color: #fff;
+    vertical-align: top;
+}
+.customer-achieve .team-joy {
+	position: relative;
+	display: inline-block;
+	height: 80px;
+	padding-left: 12px;
+	width: calc(100% - 90px);
+}
+.team-joy > p {
+    font-family: OpenSans-bold;
+	display: inline-block;
+	padding-bottom: 10px;
+}
+.team-joy > span {
+	position: absolute;
+	left: 12px;
+	bottom: 0;
 }
 .customer-achieve .news-left {
     width: 55%;
     float: left;
-    height: 175px;
+    height: 156px;
     margin-right: 3%;
-    margin-bottom: 20px;
 }
 .customer-achieve .news-right {
     width: 42%;
     float: left;
-    height: 175px;
-    margin-bottom: 20px;
+    height: 156px;
 }
 .data-board {
 	position: relative;

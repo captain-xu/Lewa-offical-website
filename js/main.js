@@ -31,7 +31,7 @@ function debounce(fn) {
     clearTimeout(timer);
     timer = setTimeout(function() {
       fn.apply(context, args);
-    }, 200);
+    }, 100);
   }
 };
 
