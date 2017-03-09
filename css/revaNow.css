@@ -68,77 +68,45 @@
     opacity: .5;
 }
 
-.modular-container {
-    padding-top: 300px;
-}
-
-.modular-container .modular-title {
-    color: #152844;
+.level-container {
+    padding-top: 360px;
     text-align: center;
-    font-weight: normal;
-    font-size: 46px;
-    padding: 0 10%;
 }
-
-
-.modular-container .modular-preview {
-    width: 100%;
-    padding: 0 10% 180px;
+.level-wrapper {
+    padding-top: 66px;
+    padding-bottom: 126px;
+    font-size: 0;
 }
-
-.modular-preview .preview-left {
-    letter-spacing: 12px;
-    text-align: center;
-    padding: 78px 0;
-}
-
-
-.modular-preview .preview-left-btn>li {
+.level-wrapper > li {
     display: inline-block;
-    width: 115px;
-    height: 115px;
-    cursor: pointer;
-    background-size: 100% 100%;
+    width: 50%;
+    font-size: 22px;
+    color: #535353;
+    vertical-align: middle;
+}
+.level-left {
+    padding-right: 20px;
+    text-align: right;
+}
+.level-right {
+    padding-left: 20px;
+    text-align: left;
+    border-left: 1px solid #ddd;
 }
 
-.modular-preview .preview-left-btn>li:nth-child(1) {
-    background-image: url(../img/reva_tracker.png);
+.data-container {
+    width: 100%;
+    padding-top: 180px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(#3D67BD, #1F9FE9);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#3D67BD, endColorStr=#1F9FE9);
 }
-
-.modular-preview .preview-left-btn>li:nth-child(2) {
-    background-image: url(../img/reva_ad.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(3) {
-    background-image: url(../img/reva_push.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(4) {
-    background-image: url(../img/reva_update.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(1).active {
-    background-image: url(../img/reva_trackerActive.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(2).active {
-    background-image: url(../img/reva_adActive.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(3).active {
-    background-image: url(../img/reva_pushActive.png);
-}
-
-.modular-preview .preview-left-btn>li:nth-child(4).active {
-    background-image: url(../img/reva_updateActive.png);
-}
-
 .data-wriper {
     padding: 100px 0;
     background-image: url(../img/bg_world.png);
     background-position: center 0;
     background-repeat: no-repeat;
-    // background-size: 80% 100%;
 }
 .data-title {
     color: #fff;
@@ -187,6 +155,46 @@
     }
 }
 
+
+.modular-container .modular-preview {
+    width: 100%;
+    padding: 0 10% 180px;
+}
+
+.modular-preview .preview-left {
+    letter-spacing: 12px;
+    text-align: center;
+    padding-bottom: 78px;
+}
+
+
+.modular-preview .preview-left-btn>li {
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+    background-size: 100% 100%;
+}
+
+.modular-preview .preview-left-btn>li:nth-child(1) {
+    background-image: url(../img/reva_tracker.png);
+}
+
+.modular-preview .preview-left-btn>li:nth-child(2) {
+    background-image: url(../img/reva_ad.png);
+}
+
+.modular-preview .preview-left-btn>li:nth-child(3) {
+    background-image: url(../img/reva_push.png);
+}
+
+.modular-preview .preview-left-btn>li:nth-child(4) {
+    background-image: url(../img/reva_update.png);
+}
+
+.modular-preview .preview-left-btn>li.active {
+    border-bottom: 3px solid #152844;
+}
 .preview-right .swiper-container {
     width: 800px;
     height: 520px;
@@ -197,137 +205,153 @@
     height: 100%;
 }
 
-.app-container {
-    width: 100%;
-    padding-top: 180px;
+.app-container > li{
+    padding-top: 150px;
+}
+.app-container .rms-title {
     text-align: center;
-    color: #fff;
-    background: linear-gradient(#0E356D, #4D6EB8);
-    filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#0E356D, endColorStr=#4D6EB8);
 }
-
-.app-container .app-title {
-    font-weight: normal;
+.rms-title h3 {
+    padding-top: 42px;
+    padding-bottom: 21px;
     font-size: 48px;
-}
-
-.app-container .app-subtitle {
+    color: #152844;
     font-weight: normal;
-    padding: 30px 0;
-    font-size: 29px;
 }
-
-.app-container .app-content {
-    opacity: .52;
-    line-height: 22px;
-    font-size: 16px;
+.rms-title {
+    text-align: center;
 }
-
-.app-container .app-icon {
-    padding: 100px 0;
+.rms-title p {
+    font-family: OpenSans-Light;
+    font-size: 20px;
+    color: #5B5B5B;
 }
-
-.app-container .app-icon>li {
-    display: inline-block;
-    padding-right: 50px;
-    cursor: pointer;
-}
-.app-container .app-icon>li:last-child {
-    padding: 0;
-}
-
-.app-icon>li>img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 16px;
-    -webkit-transition: all .2s linear;
-    -moz-transition: all .2s linear;
-    -ms-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    transition: all .2s linear;
-}
-
-.app-icon>li>span {
-    letter-spacing: 1.75px;
-    color: #D5DCE8;
-    -webkit-transition: all .2s linear;
-    -moz-transition: all .2s linear;
-    -ms-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    transition: all .2s linear;
-}
-
-.app-icon>li:hover>img {
-    width: 62px;
-    height: 62px;
-    margin-bottom: 16px;
-}
-
-.app-icon>li:hover>span {
-    font-size: 15px;
-    letter-spacing: 1.75px;
-    color: #D5DCE8;
-}
-
-.app-icon>li>span img {
-    display: none;
-    padding-right: 5px;
-}
-
-.app-icon>li.active>img {
-    width: 62px;
-    height: 62px;
-    color: #00B9F7;
-}
-
-.app-icon>li.active>span {
-    font-size: 15px;
-    color: #00B9F7;
-}
-
-.app-icon>li.active>span img {
-    display: inline-block;
-}
-.app-preview {
-	width: 900px;
-	height: 550px;
-	margin: 0 auto;
-}
-.app-preview .swiper-container {
-	height: 100%;
-}
-.app-preview img {
-	width: 280px;
-	height: 100%;
-}
-.app-preview video {
-    display: none;
-    width: 280px;
-    height: 450px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -140px;
-    margin-top: -230px;
-}
-.app-preview .app-video-btn {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -25px;
-    margin-top: -25px;
-    cursor: pointer;
-}
-.app-cover {
+.rms-xscreen {
     position: relative;
-    top: -115px;
-    width: 100%;
-    height: 115px;
-    background: #fff;
+}
+.app-wrapper {
+    font-size: 0;
+}
+.app-wrapper > li {
+    display: inline-block;
+    width: 50%;
+    font-size: 20px;
+}
+.xscreen-preview img {
+    position: relative;
+    top: -200px;
+    left: -200px;
+    opacity: 0;
+    transition: all 1.2s ease;
+}
+.xscreen-preview img.active {
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+.app-note {
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+.app-name {
+    color: #152844;
+    padding: 25px;
+}
+.app-note .app-show {
+    padding: 60px 0;
+    line-height: 50px;
+    cursor: pointer;
+}
+@media screen and (max-width: 1120px ) {
+    .app-note .app-show {
+        padding: 30px 0;
+        line-height: 30px;
+    }
+    .xscreen-describtion {
+        font-size: 14px;
+    }
+}
+.app-show .app-show-detail {
+    display: inline-block;
+    padding: 0 5px;
+}
+.app-show-detail > img {
+    position: absolute;
+    width: 20%;
+    bottom: 6%;
+    right: 30%;
+    opacity: 0;
+    transition: all 1s ease;
+    z-index: -1;
+}
+.app-show-detail:hover {
+    font-weight: bold;
+}
+.app-show-detail:hover > img {
+    opacity: 1;
+    right: 43%;
+    z-index: 1;
+}
+.xscreen-describtion {
+    color:  #152844;
+}
+
+.launcher-preview {
+    text-align: right;
+    position: relative;
+}
+.launcher-preview img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+}
+.launcher-preview img.hover {
+    opacity: 1;
     z-index: 2;
 }
-.footer {
-    margin: -100px auto 100px;
+.launcher-preview .launcher-sample {
+    position: relative;
+    top: -200px;
+    right: -200px;
+    opacity: 0;
+    z-index: 1;
+    transition: all 1.2s ease;
+}
+.launcher-preview .launcher-sample.active {
+    top: 0;
+    right: 0;
+    opacity: 1;
+}
+.launcher-show > span {
+    display: inline-block;
+    padding: 0 5px;
+}
+.launcher-show > .launcher-show-detail:hover {
+    font-weight: bold;
+}
+
+.rms-lockscreen {
+    text-align: center;
+}
+.lockscreen-discribtion {
+    font-size: 20px;
+    position: relative;
+    top: 36px;
+    z-index: 1;
+}
+.lockscreen-sample {
+    width: 100%;
+    height: 1304px;
+    text-align: center;
+    background-image: url(../img/app_lockscreen_sample.jpg);
+    background-size: 2418px 1304px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.lockscreen-sample > img {
+    position: relative;
+    top: 108px;
 }
