@@ -23,10 +23,12 @@
 .top-img-wrip .top-rbs {
     position: relative;
 }
+
 .top-img-wrip .top-rms img,
 .top-img-wrip .top-rbs img {
     position: absolute;
-    left: 0; top: 0;
+    left: 0;
+    top: 0;
     height: 100%;
     -webkit-transition: all 1s linear;
     -moz-transition: all 1s linear;
@@ -72,11 +74,13 @@
     padding-top: 360px;
     text-align: center;
 }
+
 .level-wrapper {
     padding-top: 66px;
     padding-bottom: 126px;
     font-size: 0;
 }
+
 .level-wrapper > li {
     display: inline-block;
     width: 50%;
@@ -84,10 +88,12 @@
     color: #535353;
     vertical-align: middle;
 }
+
 .level-left {
     padding-right: 20px;
     text-align: right;
 }
+
 .level-right {
     padding-left: 20px;
     text-align: left;
@@ -100,14 +106,16 @@
     text-align: center;
     color: #fff;
     background: linear-gradient(#3D67BD, #1F9FE9);
-    filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#3D67BD, endColorStr=#1F9FE9);
+    filter: progid: DXImageTransform.Microsoft.Gradient(startColorStr=#3D67BD, endColorStr=#1F9FE9);
 }
+
 .data-wriper {
     padding: 100px 0;
     background-image: url(../img/bg_world.png);
     background-position: center 0;
     background-repeat: no-repeat;
 }
+
 .data-title {
     color: #fff;
     text-align: center;
@@ -115,32 +123,38 @@
     font-size: 46px;
     padding: 0 10%;
 }
+
 .data-content {
     width: 90%;
     margin: 0 auto;
     padding: 200px 0;
     font-size: 0;
 }
+
 .data-content > li {
     display: inline-block;
     width: 20%;
     text-align: center;
     vertical-align: top;
 }
+
 .data-content > li > p {
     font-size: 50px;
     padding-bottom: 20px;
     color: #fff;
 }
+
 .data-content > li > label {
     font-size: 20px;
     color: rgba(255, 255, 255, 0.35);
 }
+
 @media screen and (max-width: 1380px) {
     .data-content > li > p {
         font-size: 42px;
     }
 }
+
 @media screen and (max-width: 1250px) {
     .data-content > li > p {
         font-size: 36px;
@@ -149,12 +163,12 @@
         font-size: 18px;
     }
 }
+
 @media screen and (max-width: 980px) {
     .data-content > li > p {
         font-size: 32px;
     }
 }
-
 
 .modular-container .modular-preview {
     width: 100%;
@@ -166,7 +180,6 @@
     text-align: center;
     padding-bottom: 78px;
 }
-
 
 .modular-preview .preview-left-btn>li {
     display: inline-block;
@@ -195,6 +208,7 @@
 .modular-preview .preview-left-btn>li.active {
     border-bottom: 3px solid #152844;
 }
+
 .preview-right .swiper-container {
     width: 800px;
     height: 520px;
@@ -204,18 +218,21 @@
     width: 100%;
     height: 100%;
 }
+
 .modular-discription {
     text-align: center;
     font-size: 22px;
     color: #474747;
 }
 
-.app-container > li{
+.app-container > li {
     padding-top: 150px;
 }
+
 .app-container .rms-title {
     text-align: center;
 }
+
 .rms-title h3 {
     padding-top: 42px;
     padding-bottom: 21px;
@@ -223,25 +240,31 @@
     color: #152844;
     font-weight: normal;
 }
+
 .rms-title {
     text-align: center;
 }
+
 .rms-title p {
     font-family: OpenSans-Light;
     font-size: 20px;
     color: #5B5B5B;
 }
+
 .rms-xscreen {
     position: relative;
 }
+
 .app-wrapper {
     font-size: 0;
 }
+
 .app-wrapper > li {
     display: inline-block;
     width: 50%;
     font-size: 20px;
 }
+
 .xscreen-preview img {
     position: relative;
     top: -200px;
@@ -249,26 +272,31 @@
     opacity: 0;
     transition: all 1.2s ease;
 }
+
 .xscreen-preview img.active {
     top: 0;
     left: 0;
     opacity: 1;
 }
+
 .app-note {
     height: 100%;
     text-align: center;
     vertical-align: middle;
 }
+
 .app-name {
     color: #152844;
     padding: 25px;
 }
+
 .app-note .app-show {
     padding: 60px 0;
     line-height: 50px;
     cursor: pointer;
 }
-@media screen and (max-width: 1120px ) {
+
+@media screen and (max-width: 1120px) {
     .app-note .app-show {
         padding: 30px 0;
         line-height: 30px;
@@ -277,10 +305,12 @@
         font-size: 14px;
     }
 }
+
 .app-show .app-show-detail {
     display: inline-block;
     padding: 0 5px;
 }
+
 .app-show-detail > img {
     position: absolute;
     width: 20%;
@@ -290,22 +320,26 @@
     transition: all 1s ease;
     z-index: -1;
 }
+
 .app-show-detail:hover {
     font-weight: bold;
 }
+
 .app-show-detail:hover > img {
     opacity: 1;
     right: 43%;
     z-index: 1;
 }
+
 .xscreen-describtion {
-    color:  #152844;
+    color: #152844;
 }
 
 .launcher-preview {
     text-align: right;
     position: relative;
 }
+
 .launcher-preview img {
     position: absolute;
     right: 0;
@@ -313,10 +347,12 @@
     opacity: 0;
     z-index: -1;
 }
+
 .launcher-preview img.hover {
     opacity: 1;
     z-index: 2;
 }
+
 .launcher-preview .launcher-sample {
     position: relative;
     top: -200px;
@@ -325,15 +361,18 @@
     z-index: 1;
     transition: all 1.2s ease;
 }
+
 .launcher-preview .launcher-sample.active {
     top: 0;
     right: 0;
     opacity: 1;
 }
+
 .launcher-show > span {
     display: inline-block;
     padding: 0 5px;
 }
+
 .launcher-show > .launcher-show-detail:hover {
     font-weight: bold;
 }
@@ -341,12 +380,14 @@
 .rms-lockscreen {
     text-align: center;
 }
+
 .lockscreen-discription {
     font-size: 20px;
     position: relative;
     top: 36px;
     z-index: 1;
 }
+
 .lockscreen-sample {
     width: 100%;
     height: 1304px;
@@ -356,7 +397,22 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .lockscreen-sample > img {
     position: relative;
-    top: 108px;
+    top: 105px;
+}
+.lockscreen-sample:hover > img[alt="lockscreen_center"] {
+    display: none;
+}
+.lockscreen-sample::after {
+    content: "";
+    opacity: 0.5;
+    top: 105px;
+    // transition:all 1s;
+}
+.lockscreen-sample:hover::after {
+    position: relative;
+    opacity: 1;
+    content: url(../img/app_lockscreen_center01.png);
 }

@@ -142,7 +142,7 @@
                             <img src="../img/app_xscreen_photo.png" alt="Wallpapers">
                         </span>
                     </div>
-                    <a href=""><img src="../img/app_google play.png" alt="xscreen-googleplay"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.reva.xscreen" target="_blank"><img src="../img/app_google play.png" alt="xscreen-googleplay"></a>
                 </li>
             </ol>
         </li>
@@ -316,6 +316,14 @@
         function hideGif(className) {
             $(className).removeClass('hover');
         };
+        // $(".lockscreen-sample img").on('mouseover mouseout', function(event) {
+        //     event.preventDefault();
+        //     if(event.type == "mouseover") {
+        //         $(this).attr('src', '../img/app_lockscreen_center01.png');
+        //     } else if (event.type == "mouseout") {
+        //         $(this).attr('src', '../img/app_lockscreen_center.png');
+        //     }
+        // });
         var revaSwiper = new Swiper('.preview-right .swiper-container', {
             effect : 'coverflow',
             slidesPerView: 1.5,
