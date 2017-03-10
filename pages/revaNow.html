@@ -182,7 +182,7 @@
         <li class="rms-lockscreen">
             <img src="../img/app_lockscreen.png" alt="lockscreen-icon">
             <h3 class="app-name">REVA Lockscreen</h3>
-            <p class="lockscreen-discribtion">Provide multiple personalized services including search, news, <br> weather forecast, video news and photo news etc.</p>
+            <p class="lockscreen-discription">Provide multiple personalized services including search, news, <br> weather forecast, video news and photo news etc.</p>
             <div class="lockscreen-sample">
                 <img src="../img/app_lockscreen_center.png" alt="lockscreen_center">
             </div>
@@ -196,11 +196,11 @@
     <div class="modular-container">
         <div class="modular-preview">
             <div class="preview-left">
-                <ul class="preview-left-btn">
-                    <li onclick="slideReva(0)" class="active"></li>
-                    <li onclick="slideReva(1)"></li>
-                    <li onclick="slideReva(2)"></li>
-                    <li onclick="slideReva(3)"></li>
+                <ul class="preview-left-btn" onclick="slideReva(event)">
+                    <li id="0" class="active"></li>
+                    <li id="1"></li>
+                    <li id="2"></li>
+                    <li id="3"></li>
                 </ul>
             </div>
             <div class="preview-right">
@@ -214,6 +214,7 @@
                 </div>
             </div>
         </div>
+        <p class="modular-discription">Analyze sales performance in real time. Understand user behavior with big data. <br>Deliver business insights from depth analysis.</p>
     </div>
     <footer class="footer">
         <!-- <ul class="footer-pub">
@@ -331,9 +332,12 @@
                 slideRevaIndex(swiper.activeIndex);
             }
         });
-        var slideReva = function(num) {
-            revaSwiper.slideTo(num, 1000, false);
-            slideRevaIndex(num);
+        var slideReva = function(event) {
+            if (event.target.nodeName.toLowerCase() === 'li') {
+                var num = Number(event.target.id);
+                revaSwiper.slideTo(num, 1000, false);
+                slideRevaIndex(num);
+            }
         };
         function slideRevaIndex(num) {
             $(".preview-left-btn").children().eq(num).addClass('active').siblings().removeClass('active');

@@ -204,6 +204,11 @@
     width: 100%;
     height: 100%;
 }
+.modular-discription {
+    text-align: center;
+    font-size: 22px;
+    color: #474747;
+}
 
 .app-container > li{
     padding-top: 150px;
@@ -336,7 +341,7 @@
 .rms-lockscreen {
     text-align: center;
 }
-.lockscreen-discribtion {
+.lockscreen-discription {
     font-size: 20px;
     position: relative;
     top: 36px;

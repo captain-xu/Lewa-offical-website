@@ -223,6 +223,7 @@
 .footer .copyright {
     padding-top: 15px;
     line-height: 34px;
+    border-top: 1px solid #EEF1EC;
 }
 
 .footer .copyright > a {
