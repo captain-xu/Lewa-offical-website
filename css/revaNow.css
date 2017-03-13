@@ -184,7 +184,7 @@
 .modular-preview .preview-left-btn>li {
     display: inline-block;
     width: 110px;
-    height: 110px;
+    height: 75px;
     cursor: pointer;
     background-size: 100% 100%;
 }
@@ -389,6 +389,7 @@
 }
 
 .lockscreen-sample {
+    position: relative;
     width: 100%;
     height: 1304px;
     text-align: center;
@@ -397,22 +398,26 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+#lockscreen {
+    position: absolute;
+    top: 120px;
+}
 
 .lockscreen-sample > img {
-    position: relative;
-    top: 105px;
+    width: 610px;
+    max-width: 610px;
+    height: 420px;
+    position: absolute;
+    left: 50%;
+    margin-left: -310px;
+    top: 100px;
 }
-.lockscreen-sample:hover > img[alt="lockscreen_center"] {
-    display: none;
+.lockscreen-sample > img[alt="png"] {
+    opacity: 0;
+    top: 160px;
+    transition: all 1s ease;
 }
-.lockscreen-sample::after {
-    content: "";
-    opacity: 0.5;
-    top: 105px;
-    // transition:all 1s;
-}
-.lockscreen-sample:hover::after {
-    position: relative;
+.lockscreen-sample > img[alt="png"].active {
     opacity: 1;
-    content: url(../img/app_lockscreen_center01.png);
+    top: 100px;
 }
