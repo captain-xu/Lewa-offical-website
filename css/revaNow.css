@@ -183,8 +183,8 @@
 
 .modular-preview .preview-left-btn>li {
     display: inline-block;
-    width: 110px;
-    height: 75px;
+    width: 140px;
+    height: 90px;
     cursor: pointer;
     background-size: 100% 100%;
 }
@@ -286,6 +286,7 @@
 }
 
 .app-name {
+    font-size: 25px;
     color: #152844;
     padding: 25px;
 }

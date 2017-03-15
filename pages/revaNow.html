@@ -208,7 +208,7 @@
                 </div>
             </div>
         </div>
-        <p class="modular-discription">Analyze sales performance in real time. Understand user behavior with big data. <br>Deliver business insights from depth analysis.</p>
+        <p class="modular-discription">Analyze sales performance in real time. Understand user behavior with big data. Deliver business insights from depth analysis.</p>
     </div>
     <footer class="footer">
         <!-- <ul class="footer-pub">
@@ -337,11 +337,26 @@
             if (event.target.nodeName.toLowerCase() === 'li') {
                 var num = Number(event.target.id);
                 revaSwiper.slideTo(num, 1000, false);
-                slideRevaIndex(num);
-            }
+                slideRevaIndex(num);            }
         };
         function slideRevaIndex(num) {
             $(".preview-left-btn").children().eq(num).addClass('active').siblings().removeClass('active');
+            var discribe = $(".modular-discription");
+            switch (num) {
+                case 0:
+                    discribe.text('Analyze sales performance in real time. Understand user behavior with big data. Deliver business insights from depth analysis.');
+                break;
+                case 1:
+                    discribe.text('Monetize your mobile resource in one-stop solution. Sophisticated, yet simple control on ad campaign to maximize the ROI.');
+                break;
+                case 2:
+                    discribe.text('Build consistent communication, and boost user engagement to meet your operation goal, with flexible targeting and personalization.');
+                break;
+                case 3:
+                    discribe.text('Quick, unobtrusive deployment to the latest version of your services/apps. Keep maintenance simple and at minimum cost.');
+                break;
+            }
+
         };
     </script>
 </body>
