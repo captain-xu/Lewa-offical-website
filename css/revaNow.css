@@ -322,11 +322,13 @@
     z-index: -1;
 }
 
-.app-show-detail:hover {
+.app-show-detail:hover,
+.app-show-detail.active {
     font-weight: bold;
 }
 
-.app-show-detail:hover > img {
+.app-show-detail:hover > img,
+.app-show-detail.active > img {
     opacity: 1;
     right: 43%;
     z-index: 1;
@@ -413,12 +415,12 @@
     margin-left: -310px;
     top: 100px;
 }
-.lockscreen-sample > img[alt="png"] {
+.lockscreen-sample > img {
     opacity: 0;
     top: 160px;
     transition: all 1s ease;
 }
-.lockscreen-sample > img[alt="png"].active {
+.lockscreen-sample > img.active {
     opacity: 1;
     top: 100px;
 }

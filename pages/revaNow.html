@@ -121,7 +121,6 @@
                             Recommendation
                             <img src="../img/app_xscreen_recommend.png" alt="Recommend">
                         </span>
-                        <br>
                         <span class="app-show-detail">
                             Weather
                             <img src="../img/app_xscreen_weather.png" alt="Weather">
@@ -178,6 +177,7 @@
             <p class="lockscreen-discription">Provide multiple personalized services including search, news, <br> weather forecast, video news and photo news etc.</p>
             <div class="lockscreen-sample">
                 <img src="../img/app_lockscreen_center.png" alt="png">
+                <img src='../img/app_lockscreen_center.gif' alt="gif">
                 <i id="lockscreen"></i>
             </div>
         </li>
@@ -263,8 +263,26 @@
     <script>
         $(document).ready(function() {
             $(window).on("scroll", debounce(revaScroll));
+            $(".app-show-detail").hover(function() {
+                $(this).addClass('active').siblings().removeClass('active');
+                clearInterval(xscreenCarousel);
+            }, function() {
+                xscreenCarousel = setInterval(function() {
+                    carousel();
+                }, 3000);
+            });
         });
         var isScroll = true;
+        var xscreenCarousel = setInterval(function() {
+            carousel();
+        }, 3000);
+        function carousel() {
+            if ($(".app-show-detail.active").next().length) {
+                $(".app-show-detail.active").next().addClass('active').siblings().removeClass('active');
+            } else {
+                $(".app-show-detail").first().addClass('active').siblings().removeClass('active');
+            }
+        };
         function revaScroll() {
             var widowHeight = $(window).height();
             var scroll_top = $(document).scrollTop();
@@ -298,16 +316,16 @@
                 }
                 if (scroll_top >= xscreen) {
                     $(".xscreen-preview img").addClass('active');
+                    if (!$(".app-show-detail").hasClass('active')) {
+                        $(".app-show-detail").first().addClass('active');
+                    }
                 }
                 if (scroll_top >= launcher) {
                     $(".launcher-preview .launcher-sample").addClass('active');
                 }
                 if (scroll_top >= lockscreen) {
                     isScroll = false;
-                    $(".lockscreen-sample img[alt='png']").addClass('active');
-                    setTimeout(function() {
-                        $(".lockscreen-sample").append("<img src='../img/app_lockscreen_center.gif'>");
-                    }, 1000);
+                    $(".lockscreen-sample img").addClass('active');
                 }
             }
         };
