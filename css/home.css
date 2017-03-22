@@ -195,6 +195,15 @@
 	box-shadow: 0 12px 42px 12px rgba(0,0,0,0.08);
 	vertical-align: top;
 }
+@media screen and (max-width: 1080px) {
+	.customer-achieve li {
+		display: inline-block;
+		width: 480px;
+		max-width: 480px;
+		margin-right: 0 !important;
+		margin-top: 0 !important;
+	}
+}
 .customer-achieve h4 {
 	height: 34px;
 	line-height: 45px;
