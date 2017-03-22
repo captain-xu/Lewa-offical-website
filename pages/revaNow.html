@@ -144,13 +144,13 @@
                     <img src="../img/app_launcher.png" alt="launcher-icon">
                     <h3 id="launcher" class="app-name">REVA Launcher</h3>
                     <div class="app-show launcher-show">
-                        <span class="launcher-show-detail" onmouseover="showGif('.launcher-poptouch')" onmouseout="hideGif('.launcher-poptouch')">
+                        <span class="launcher-show-detail" name=".launcher-poptouch">
                             Pop Touch
                         </span>
-                        <span class="launcher-show-detail" onmouseover="showGif('.launcher-folder')" onmouseout="hideGif('.launcher-folder')">
+                        <span class="launcher-show-detail" name=".launcher-folder">
                             Smart&Virtual Folder 
                         </span>
-                        <span class="launcher-show-detail" onmouseover="showGif('.launcher-clean')" onmouseout="hideGif('.launcher-clean')">
+                        <span class="launcher-show-detail" name=".launcher-clean">
                             Memory clean
                         </span>
                         <br>
@@ -165,9 +165,9 @@
                 </li>
                 <li class="launcher-preview">
                     <img class="launcher-sample" src="../img/app_launcher_sample.png" alt="launcher">
-                    <img class="launcher-poptouch" src="../img/app_launcher_poptouch.gif" alt="poptouch">
-                    <img class="launcher-folder" src="../img/app_launcher_folder.gif" alt="folder">
-                    <img class="launcher-clean" src="../img/app_launcher_clean.gif" alt="clean">
+                    <img class="laucher-carousel launcher-poptouch" src="../img/app_launcher_poptouch.gif" alt="poptouch">
+                    <img class="laucher-carousel launcher-folder" src="../img/app_launcher_folder.gif" alt="folder">
+                    <img class="laucher-carousel launcher-clean" src="../img/app_launcher_clean.gif" alt="clean">
                 </li>
             </ol>
         </li>
@@ -271,17 +271,41 @@
                     carousel();
                 }, 3000);
             });
+            $(".launcher-show-detail").hover(function() {
+                $(this).addClass('active').siblings().removeClass('active');
+                var name = $(this).attr('name');
+                $(name).addClass('hover').siblings().removeClass('hover');
+                clearInterval(launcherCarousel);
+            }, function() {
+                launcherCarousel = setInterval(function() {
+                    carouselLauncher();
+                }, 8000);
+            });
         });
         var isScroll = true;
         var xscreenCarousel = setInterval(function() {
             carousel();
         }, 3000);
+        var launcherCarousel = setInterval(function() {
+            carouselLauncher();
+        }, 8000);
         function carousel() {
             if ($(".app-show-detail.active").next().length) {
                 $(".app-show-detail.active").next().addClass('active').siblings().removeClass('active');
             } else {
                 $(".app-show-detail").first().addClass('active').siblings().removeClass('active');
             }
+
+        };
+        function carouselLauncher() {
+            if ($(".launcher-show-detail.active").next('.launcher-show-detail').length) {
+                $(".launcher-show-detail.active").next().addClass('active').siblings().removeClass('active');
+                $(".laucher-carousel.hover").next().addClass('hover').siblings().removeClass('hover');
+            } else {
+                $(".launcher-show-detail").first().addClass('active').siblings().removeClass('active');
+                $(".laucher-carousel").first().addClass('hover').siblings().removeClass('hover');
+            }
+
         };
         function revaScroll() {
             var widowHeight = $(window).height();
@@ -322,18 +346,18 @@
                 }
                 if (scroll_top >= launcher) {
                     $(".launcher-preview .launcher-sample").addClass('active');
+                    if (!$(".launcher-show-detail").hasClass('active')) {
+                        $(".launcher-show-detail").first().addClass('active');
+                        setTimeout(function() {
+                            $(".laucher-carousel").first().addClass('hover');
+                        }, 1000);
+                    }
                 }
                 if (scroll_top >= lockscreen) {
                     isScroll = false;
                     $(".lockscreen-sample img").addClass('active');
                 }
             }
-        };
-        function showGif(className) {
-            $(className).addClass('hover');
-        };
-        function hideGif(className) {
-            $(className).removeClass('hover');
         };
         var revaSwiper = new Swiper('.preview-right .swiper-container', {
             effect : 'coverflow',

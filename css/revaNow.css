@@ -376,7 +376,7 @@
     padding: 0 5px;
 }
 
-.launcher-show > .launcher-show-detail:hover {
+.launcher-show > .launcher-show-detail.active {
     font-weight: bold;
 }
 

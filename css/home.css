@@ -288,9 +288,8 @@
 	margin: 0 auto;
 	padding-top: 150px;
 	background-image: url(../img/bg_world.png);
-	background-size: 90% 100%;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center 0;
 	font-size: 0;
 }
 .data-value li {
